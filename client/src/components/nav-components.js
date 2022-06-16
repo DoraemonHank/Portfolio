@@ -49,11 +49,11 @@ const NavComponent = () =>{
                 }} className="my_nav">
                 <div className="my_container">
                     <div className="my_logo">
-                        <Link className="fs-4" href="#">Your Logo</Link>
-                        <select  onChange={onHandleSelect} 
+                        <Link className="fs-4" to="#">Your Logo</Link>
+                        <select   onChange={onHandleSelect} 
                         className=" ms-3" 
                         aria-label="Default select example">
-                            <option value="zh-tw" selected>中文</option>
+                            <option value="zh-tw" >中文</option>
                             <option value="en">English</option>
                         </select>
                     </div>
