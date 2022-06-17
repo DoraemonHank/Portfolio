@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import { render } from 'react-dom';
+
 import {EditorState,convertToRaw } from "draft-js";
 import {Editor} from "react-draft-wysiwyg"
 import draftToHtml from "draftjs-to-html";
 import PostService from '../services/post.service';
 import ImageService from '../services/image.service';
-import axios from "axios";
+
 
 function uploadImageCallBack(file) {
     // console.log(file)
@@ -186,7 +186,7 @@ class EditorContainer extends Component{
           <div className="container">
             <input type="file" onChange={this.onChange} />
             {
-              this.state.imgUrl && <img width="25%" src={this.state.imgUrl} />
+              this.state.imgUrl && <img width="25%" src={this.state.imgUrl} alt=""/>
             }
             <button onClick={this.submit}>上傳</button>
           </div>
