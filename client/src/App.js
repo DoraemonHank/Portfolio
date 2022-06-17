@@ -1,12 +1,10 @@
-import React,{useState,Suspense } from 'react'
-import {Switch,Route} from "react-router-dom";
-import NavComponent from "./components/nav-components";
-import HomeComponent from './components/home-components';
+import React, { Suspense } from 'react'
+import { Switch, Route } from 'react-router-dom'
+import NavComponent from './components/nav-components'
+import HomeComponent from './components/home-components'
 
-const App = () =>{
-
-
-    return (
+const App = () => {
+  return (
         <div>
             <Suspense fallback="loading">
                 <NavComponent />
@@ -17,10 +15,9 @@ const App = () =>{
                     <HomeComponent />
                 </Route>
             </Switch>
-           
-        </div>
-    )
 
+        </div>
+  )
 }
 
-export default App;
+export default App

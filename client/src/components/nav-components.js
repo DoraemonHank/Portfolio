@@ -1,63 +1,61 @@
-import React, { useState ,useEffect} from "react";
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router";
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
-import "../../style/myNav.scss";
+import '../../style/myNav.scss'
 
-const NavComponent = () =>{
+const NavComponent = () => {
+  const [isActive, setIsActive] = useState('')
+  const [mainListDiv, setmainListDiv] = useState('')
+  const [navSize, setnavSize] = useState('10rem')
+  const [navColor, setnavColor] = useState('transparent')
 
-    let [isActive,setIsActive] = useState("");
-    let [mainListDiv,setmainListDiv] = useState("");
-    let [navSize, setnavSize] = useState("10rem");
-    let [navColor, setnavColor] = useState("transparent");
+  const onHandleBuger = () => {
+    console.log('Clicked menu')
+    setIsActive(isActive === 'active' ? '' : 'active')
+    setmainListDiv(mainListDiv === 'show_list' ? '' : 'show_list')
+  }
 
-    const onHandleBuger = () =>{
-        console.log("Clicked menu");
-        setIsActive(isActive === "active" ? "" : "active");
-        setmainListDiv(mainListDiv === "show_list" ? "" : "show_list");
+  const { t, i18n } = useTranslation()
+  const changeLanguage = (lng) => {
+    // console.log(lng);
+    i18n.changeLanguage(lng)
+  }
+
+  const onHandleSelect = (e) => {
+    console.log(e.target.value)
+    changeLanguage(e.target.value)
+  }
+
+  const listenScrollEvent = () => {
+    window.scrollY > 10 ? setnavColor('#252734') : setnavColor('transparent')
+    window.scrollY > 10 ? setnavSize('5rem') : setnavSize('10rem')
+  }
+  useEffect(() => {
+    window.addEventListener('scroll', listenScrollEvent)
+    return () => {
+      window.removeEventListener('scroll', listenScrollEvent)
     }
+  }, [])
 
-    const { t, i18n } = useTranslation();
-    const changeLanguage = (lng) => {
-       // console.log(lng);
-        i18n.changeLanguage(lng);
-     };
-
-     const onHandleSelect = (e) =>{
-        console.log(e.target.value);
-        changeLanguage(e.target.value)
-     }
-
-     const listenScrollEvent = () => {
-        window.scrollY > 10 ? setnavColor("#252734") : setnavColor("transparent");
-        window.scrollY > 10 ? setnavSize("5rem") : setnavSize("10rem");
-      };
-      useEffect(() => {
-        window.addEventListener("scroll", listenScrollEvent);
-        return () => {
-          window.removeEventListener("scroll", listenScrollEvent);
-        };
-      }, []);
-
-    return (
-        <div>  
+  return (
+        <div>
             <nav style={{
-                backgroundColor: navColor,
-                height: navSize,
-                transition: "all 1s"
-                }} className="my_nav">
+              backgroundColor: navColor,
+              height: navSize,
+              transition: 'all 1s'
+            }} className="my_nav">
                 <div className="my_container">
                     <div className="my_logo">
                         <Link className="fs-4" to="#">Your Logo</Link>
-                        <select   onChange={onHandleSelect} 
-                        className=" ms-3" 
+                        <select onChange={onHandleSelect}
+                        className=" ms-3"
                         aria-label="Default select example">
                             <option value="zh-tw" >中文</option>
                             <option value="en">English</option>
                         </select>
                     </div>
-                    <div id="mainListDiv" className={"main_list " + mainListDiv} >
+                    <div id="mainListDiv" className={'main_list ' + mainListDiv} >
                         <ul className="navlinks">
                             <li>
                                 <Link className="fs-5 active" to="/">
@@ -72,7 +70,7 @@ const NavComponent = () =>{
                             </li>
 
                             <li >
-                                <Link className="fs-5"  to="/">
+                                <Link className="fs-5" to="/">
                                     {t('Web')}
                                 </Link>
                             </li>
@@ -84,21 +82,21 @@ const NavComponent = () =>{
                             </li>
 
                             <li >
-                                <Link  className="fs-5" to="/">
+                                <Link className="fs-5" to="/">
                                     {t('Contact')}
                                 </Link>
                             </li>
                         </ul>
                     </div>
-                    <span onClick={onHandleBuger} className={"mt-4 pt-3 navTrigger " + isActive}>
+                    <span onClick={onHandleBuger} className={'mt-4 pt-3 navTrigger ' + isActive}>
                         <i></i>
                         <i></i>
                         <i></i>
                     </span>
                 </div>
-            </nav>  
-             
-            {/* <nav className="navbar fixed-top navbar-light bg-light navbar-expand-md">     
+            </nav>
+
+            {/* <nav className="navbar fixed-top navbar-light bg-light navbar-expand-md">
                 <div className="container-md">
                     <a class="navbar-brand" href="#">Navbar w/ text</a>
                     <div className="d-none d-md-block">
@@ -134,7 +132,7 @@ const NavComponent = () =>{
                             </li>
                         </ul>
                     </div>
-                    
+
                     <span onClick={onHandleBuger} className={"navTrigger " + isActive}>
                         <i></i>
                         <i></i>
@@ -177,7 +175,7 @@ const NavComponent = () =>{
                 </ul>
             </div> */}
         </div>
-    )
+  )
 }
 
-export default NavComponent;
+export default NavComponent

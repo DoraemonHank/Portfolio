@@ -1,42 +1,41 @@
-import React, { useState ,useEffect, useRef} from "react";
-import "../../style/opening_animation.scss";
+import React, { useState, useEffect, useRef } from 'react'
+import '../../style/opening_animation.scss'
 
 const HomeComponents = () => {
-  const lastWord = useRef();
+  const lastWord = useRef()
 
-
-  let [animation,setAnimation] = useState({});
+  const [animation, setAnimation] = useState({})
 
   useEffect(() => {
-    if (lastWord && lastWord.current){
-      lastWord.current.addEventListener("animationend", () =>{
+    if (lastWord && lastWord.current) {
+      lastWord.current.addEventListener('animationend', () => {
         setAnimation(
           {
-            transition:"all 1s ease",
-            opacity:"0",
-            pointerEvents:"none"
+            transition: 'all 1s ease',
+            opacity: '0',
+            pointerEvents: 'none'
           }
-          )
-      });
+        )
+      })
     }
-    
+
     return () => {
-      lastWord.current.removeEventListener("animationend", () =>{
+      lastWord.current.removeEventListener('animationend', () => {
         setAnimation(
           {
-            transition:"all 1s ease",
-            opacity:"0",
-            pointerEvents:"none"
+            transition: 'all 1s ease',
+            opacity: '0',
+            pointerEvents: 'none'
           }
-          )
-      });
-    };
-  }, []);
+        )
+      })
+    }
+  }, [])
 
   return (
     <main>
         <section className="home">
-        </section> 
+        </section>
         <div className="animation" style={animation}>
           <div className="logo">
               <svg width="80" height="99" viewBox="0 0 80 99" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +47,7 @@ const HomeComponents = () => {
               <svg width="62" height="78" viewBox="0 0 62 78" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.2388 6.84977L18.1333 4.45996H15.7412H5.06006H2.56006V6.95996V73V75.5H5.06006H16.3516H18.8516V73V26.5362C20.1974 23.9588 21.9997 21.8915 24.263 20.2939C26.5734 18.663 29.2748 17.8218 32.4648 17.8218C36.6048 17.8218 39.1189 18.8657 40.5816 20.4409L40.5897 20.4496L40.5978 20.4582C42.1409 22.0886 43.1699 24.8687 43.2095 29.3097V73V75.5H45.7095H57.001H59.501V73V29.3599V29.3502L59.5009 29.3405C59.4374 21.1492 57.5774 14.5459 53.4936 9.97813C49.3596 5.35421 43.3314 3.23926 35.8828 3.23926C29.0824 3.23926 23.207 5.29518 18.3498 9.3663L18.2388 6.84977Z" stroke="white" strokeWidth="2" id="third" className="thePaths"/>
               </svg>
-              <svg width="71" height="104" viewBox="0 0 71 104" fill="none" xmlns="http://www.w3.org/2000/svg" style={{marginRight:"2rem"}}>
+              <svg width="71" height="104" viewBox="0 0 71 104" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginRight: '2rem' }}>
                   <path d="M19.7202 55.0376V5.25V2.75H17.2202H5.92871H3.42871V5.25V99V101.5H5.92871H17.2202H19.7202V99V76.8114L24.0704 72.2737L45.3129 100.503L46.063 101.5H47.3105H60.5552H65.5393L62.559 97.5051L35.12 60.7251L59.3938 34.6639L63.3094 30.46H57.5645H43.8315H42.7556L42.016 31.2413L21.4471 52.9698L21.3921 53.028L21.3408 53.0896L19.7202 55.0376Z" stroke="white" strokeWidth="2" id="fourth" className="thePaths"/>
               </svg>
               <svg width="65" height="99" viewBox="0 0 65 99" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,16 +75,16 @@ const HomeComponents = () => {
               </svg>
               <svg width="120" height="126" viewBox="0 0 120 126" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M16.875 116.75V110.875H44.5H47V108.375V71V68.5H44.5H16.875V61.875H43.25H45.75V59.375V25.125V23.875H48.25H74.25V34.25H52.875H50.375V36.75V101.875V104.375H52.875H61.375H63.875V101.875V47.75H74.25V120.375V122.875H76.75H85.5H88V120.375V93.593L88.4655 94.6404C89.4394 96.8318 90.5561 100.039 90.7637 102.012L90.9994 104.25H93.25C96.6137 104.25 99.4708 104.22 101.864 104.006C104.253 103.791 106.375 103.38 108.204 102.505C110.203 101.549 111.55 100.081 112.331 98.1611C113.063 96.3625 113.25 94.2839 113.25 92.125V36.75V34.25H110.75H88V23.875H114.5H117V21.375V13V10.5H114.5H48.25H45.75V13V21.375V22.625H43.25H28.6708C30.5441 18.1799 32.5173 13.1793 34.1055 8.71252L35.1223 5.85287L32.1209 5.40265L22.1209 3.90266L19.7759 3.55092L19.3007 5.87401C18.3049 10.7425 16.4961 17.2552 14.6171 22.625H5.875H3.375V25.125V116.75V119.25H5.875H14.375H16.875V116.75ZM90.8194 91.126L88 91.0476V47.75H99.625V91.2495C97.9347 91.2471 94.5982 91.2309 90.8194 91.126ZM33.625 81.5V97.875H16.875V81.5H33.625ZM32.5 35.625V49H16.875V35.625H32.5Z" stroke="white" strokeWidth="2" id="eleventh" className="thePaths" ref={lastWord}/>
-              </svg>    
+              </svg>
           </div>
-        
+
         </div>
 
         <br/>
         <div className="container marketing">
-  
-          <div className="row ">    
-                
+
+          <div className="row ">
+
             <div className="col-lg-4">
               <img src="https://i.imgur.com/XgdEeuu.png" className="w-40 h-40" alt="" />
               <h2 className="fs-4">網頁開發</h2>
@@ -106,7 +105,7 @@ const HomeComponents = () => {
               <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
               <p><a className="btn btn-outline-primary" href="#">View details &raquo;</a></p>
             </div>
-            
+
           </div>
 
           <hr className="featurette-divider"></hr>
