@@ -19,6 +19,7 @@
     position: fixed;
     line-height: 65px;
     text-align: center;
+    z-index: 1;
 }
 
 .my_nav div.my_logo {
@@ -80,6 +81,19 @@
     background-image: url(https://img.onl/dlqcE1);
     background-position: center top;
 	background-size:cover;
+    position:relative;
+    z-index: 0;
+    &::before{
+        content: "";
+        background-color:black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.25;
+        z-index: -1;
+    }
 }
 
 .navTrigger {
@@ -103,7 +117,7 @@
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1070px) {
     .navTrigger {
         display: block;
         
