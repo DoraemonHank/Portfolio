@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import '../../style/opening_animation.scss'
 
-const HomeComponents = () => {
+const HomeComponents = ({ t, changeLanguage }) => {
   const lastWord = useRef()
 
   const [animation, setAnimation] = useState({})
@@ -87,23 +87,23 @@ const HomeComponents = () => {
 
             <div className="col-lg-4">
               <img src="https://i.imgur.com/XgdEeuu.png" className="w-40 h-40" alt="" />
-              <h2 className="fs-4">網頁開發</h2>
-              <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-              <p><a className="btn btn-outline-primary" href="#">View details &raquo;</a></p>
+              <h2 className="fs-4"> {t('Web')}</h2>
+              <p>{t('WebIntro')}</p>
+              <p><a className="btn btn-outline-primary" href="#">{t('ViewMore')} &raquo;</a></p>
             </div>
 
             <div className="col-lg-4">
               <img src="https://i.imgur.com/t8s6d1R.png" className="w-40 h-40" alt="" />
-              <h2 className="fs-4">深度學習</h2>
-              <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-              <p><a className="btn btn-outline-primary" href="#">View details &raquo;</a></p>
+              <h2 className="fs-4">{t('AI')}</h2>
+              <p>{t('AiIntro')}</p>
+              <p><a className="btn btn-outline-primary" href="#">{t('ViewMore')} &raquo;</a></p>
             </div>
 
             <div className="col-lg-4">
               <img src="https://i.imgur.com/NkddNlL.jpg" className="w-40 h-40" alt="" />
-              <h2 className="fs-4">遊戲設計</h2>
-              <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-              <p><a className="btn btn-outline-primary" href="#">View details &raquo;</a></p>
+              <h2 className="fs-4">{t('Game')}</h2>
+              <p>{t('GameIntro')}</p>
+              <p><a className="btn btn-outline-primary" href="#">{t('ViewMore')} &raquo;</a></p>
             </div>
 
           </div>

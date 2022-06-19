@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
 
 import '../../style/myNav.scss'
 
-const NavComponent = () => {
+const NavComponent = (props) => {
+  const { t, changeLanguage } = props
   const [isActive, setIsActive] = useState('')
   const [mainListDiv, setmainListDiv] = useState('')
   const [navSize, setnavSize] = useState('10rem')
@@ -14,12 +14,6 @@ const NavComponent = () => {
     console.log('Clicked menu')
     setIsActive(isActive === 'active' ? '' : 'active')
     setmainListDiv(mainListDiv === 'show_list' ? '' : 'show_list')
-  }
-
-  const { t, i18n } = useTranslation()
-  const changeLanguage = (lng) => {
-    // console.log(lng);
-    i18n.changeLanguage(lng)
   }
 
   const onHandleSelect = (e) => {

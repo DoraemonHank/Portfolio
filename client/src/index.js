@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
 import './i18n'
 import App from './App'
@@ -19,7 +19,10 @@ import Offcanvas from 'bootstrap/js/dist/offcanvas'
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <Suspense fallback="loading">
       <App />
+    </Suspense>
+
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
