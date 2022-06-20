@@ -1,22 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import NavComponent from './components/nav-components'
 import HomeComponent from './components/home-components'
+import WorkComponents from './components/work-components'
 import { useTranslation } from 'react-i18next'
 
 const App = () => {
+  const [type, setType] = useState('')
   const { t, i18n } = useTranslation()
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng)
   }
+  useEffect(() => {
+    setType(JSON.parse(localStorage.getItem('Type')))
+  }, [])
   return (
         <div>
 
-            <NavComponent t={t} changeLanguage={changeLanguage}/>
+            <NavComponent t={t} changeLanguage={changeLanguage} setType={setType}/>
 
             <Switch>
                 <Route path='/' exact>
                     <HomeComponent t={t}/>
+                </Route>
+
+                <Route path={'/' + type} exact>
+                    <WorkComponents />
                 </Route>
             </Switch>
 

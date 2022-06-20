@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import '../../style/myNav.scss'
 
 const NavComponent = (props) => {
-  const { t, changeLanguage } = props
+  const { t, changeLanguage, setType } = props
   const [isActive, setIsActive] = useState('')
   const [mainListDiv, setmainListDiv] = useState('')
   const [navSize, setnavSize] = useState('10rem')
@@ -31,6 +31,11 @@ const NavComponent = (props) => {
       window.removeEventListener('scroll', listenScrollEvent)
     }
   }, [])
+
+  const onLinkWeb = () => {
+    setType('web')
+    localStorage.setItem('Type', JSON.stringify('web'))
+  }
 
   return (
         <div>
@@ -64,7 +69,7 @@ const NavComponent = (props) => {
                             </li>
 
                             <li >
-                                <Link className="fs-5" to="/">
+                                <Link className="fs-5" to="/web" onClick={onLinkWeb}>
                                     {t('Web')}
                                 </Link>
                             </li>

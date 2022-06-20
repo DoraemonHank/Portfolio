@@ -33,9 +33,23 @@ router.post("/post",async (req,res) =>{
         })
     }
     catch(err){
-        res.status(200).send(err);
+        res.status(505).send(err);
     }
     //res.send("sfdsf");
+})
+
+
+router.get("/getPost/:category",(req,res) =>{
+    let {category} = req.params;
+    console.log(category)
+    Post.find({category: category})
+    .then(data =>{
+        //console.log(data)
+        res.send(data)
+    })
+    .catch(error =>{
+        res.status(500).send(error)
+    })
 })
 
 module.exports = router;

@@ -18,7 +18,7 @@ import Offcanvas from 'bootstrap/js/dist/offcanvas'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter >
     <Suspense fallback="loading">
       <App />
     </Suspense>

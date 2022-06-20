@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import '../../style/opening_animation.scss'
 
-const HomeComponents = ({ t, changeLanguage }) => {
+const HomeComponents = ({ t }) => {
   const lastWord = useRef()
 
   const [animation, setAnimation] = useState({})
@@ -20,6 +20,7 @@ const HomeComponents = ({ t, changeLanguage }) => {
     }
 
     return () => {
+      lastWord.current &&
       lastWord.current.removeEventListener('animationend', () => {
         setAnimation(
           {
