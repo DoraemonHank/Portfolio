@@ -25,7 +25,7 @@ const App = () => {
                 </Route>
 
                 <Route path={'/' + type} exact>
-                    <WorkComponents />
+                    <WorkComponents t={t}/>
                 </Route>
             </Switch>
 

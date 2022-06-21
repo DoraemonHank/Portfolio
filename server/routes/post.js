@@ -14,13 +14,14 @@ router.get("/testAPI",(req,res) =>{
 });
 
 router.post("/post",async (req,res) =>{
-    let {title,category,order,tag,imgUrl,content} = req.body;
-    console.log(title,category,order,tag,imgUrl,content);
+    let {title,category,order,tag,intro,imgUrl,content} = req.body;
+    console.log(title,category,order,tag,intro,imgUrl,content);
     const newPost = new Post({
         title:title,
         category:category,
         order:order,
         tag:tag,
+        intro:intro,
         imgUrl:imgUrl,
         content:content
     });

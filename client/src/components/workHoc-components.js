@@ -1,7 +1,7 @@
 import React from 'react'
 import WorkService from '../services/work.service'
 
-const WorkHoc = (WrappedComponent) => {
+const WorkHoc = (WrappedComponent, t) => {
   // eslint-disable-next-line react/display-name
   return class extends React.Component {
     constructor (props) {
@@ -38,9 +38,12 @@ const WorkHoc = (WrappedComponent) => {
                 <div className='container w-md-50 h-md-50'>
                      {
                         this.state.postData[0].category === 'web' &&
-                        <h2 className='text-center'>網頁開發</h2>
+                        <div className="d-flex justify-content-center">
+                            <h4 className='title text-center'>{t('Web')}</h4>
+                        </div>
+
                      }
-                    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleControls" className="carousel slide border border-5" data-bs-ride="carousel">
                         <div className="carousel-inner">
 
                             {
@@ -76,7 +79,7 @@ const WorkHoc = (WrappedComponent) => {
             }
             {
                 this.state.postData &&
-                <WrappedComponent postData={this.state.postData} />
+                <WrappedComponent postData={this.state.postData} t={t}/>
             }
 
         </div>

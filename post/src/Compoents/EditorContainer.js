@@ -57,7 +57,8 @@ class EditorContainer extends Component{
         title:"",
         category:"",
         order:0,
-        tag:""
+        tag:"",
+        intro:""
       };
     }
   
@@ -135,11 +136,19 @@ class EditorContainer extends Component{
         console.log(this.state.tag);
       });
     }
+
+    handleChangeIntro = (e) =>{
+      this.setState({
+        intro: e.target.value
+      },() =>{
+        console.log(this.state.intro);
+      });
+    }
   
 
     handleSubmit = () =>{
       PostService.post(this.state.title,this.state.category,
-        this.state.order,this.state.tag,this.state.imgUrl,this.state.content
+        this.state.order,this.state.tag,this.state.intro,this.state.imgUrl,this.state.content
         )
       .then(response =>{
         console.log(response);
@@ -181,6 +190,11 @@ class EditorContainer extends Component{
             <input type="text" class="form-control" id="floatingInput" placeholder="xxx" 
              onChange={this.handleChangeTag}/>
             <label for="floatingInput">Tag</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="xxx" 
+             onChange={this.handleChangeIntro}/>
+            <label for="floatingInput">Intro</label>
           </div>
           <h1>圖片預覽與檔案上傳</h1>
           <div className="container">

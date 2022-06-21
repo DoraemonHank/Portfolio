@@ -3,10 +3,10 @@ const API_URL = "http://localhost:8081/api/user";
 
 class PostService{
 
-    post(title,category,order,tag,imgUrl,content){
+    post(title,category,order,tag,intro,imgUrl,content){
         return axios.post(
             API_URL + "/post",
-            {title,category,order,tag,imgUrl,content}
+            {title,category,order,tag,intro,imgUrl,content}
         );
     }
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import '../../style/opening_animation.scss'
+import '../../style/index.scss'
 
 const HomeComponents = ({ t }) => {
   const lastWord = useRef()
@@ -88,21 +89,21 @@ const HomeComponents = ({ t }) => {
 
             <div className="col-lg-4">
               <img src="https://i.imgur.com/XgdEeuu.png" className="w-40 h-40" alt="" />
-              <h2 className="fs-4"> {t('Web')}</h2>
+              <h4> {t('Web')}</h4>
               <p>{t('WebIntro')}</p>
               <p><a className="btn btn-outline-primary" href="#">{t('ViewMore')} &raquo;</a></p>
             </div>
 
             <div className="col-lg-4">
               <img src="https://i.imgur.com/t8s6d1R.png" className="w-40 h-40" alt="" />
-              <h2 className="fs-4">{t('AI')}</h2>
+              <h4>{t('AI')}</h4>
               <p>{t('AiIntro')}</p>
               <p><a className="btn btn-outline-primary" href="#">{t('ViewMore')} &raquo;</a></p>
             </div>
 
             <div className="col-lg-4">
               <img src="https://i.imgur.com/NkddNlL.jpg" className="w-40 h-40" alt="" />
-              <h2 className="fs-4">{t('Game')}</h2>
+              <h4>{t('Game')}</h4>
               <p>{t('GameIntro')}</p>
               <p><a className="btn btn-outline-primary" href="#">{t('ViewMore')} &raquo;</a></p>
             </div>
