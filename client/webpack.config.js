@@ -14,7 +14,8 @@ module.exports = {
   // 出口
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index.[hash].js'
+    filename: 'index.[hash].js',
+    publicPath: '/'
   },
 
   // 模式
@@ -84,7 +85,8 @@ module.exports = {
   // copy-webpack-plugin
   new CopyPlugin({
     patterns: [
-      { from: './public/locales', to: './locales' }
+      { from: './public/locales', to: './locales' },
+      { from: './public/_redirects', to: './' }
       // { from: "other", to: "public" },
     ]
   }),

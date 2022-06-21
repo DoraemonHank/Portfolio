@@ -87,21 +87,21 @@ const HomeComponents = ({ t }) => {
 
           <div className="row ">
 
-            <div className="col-lg-4">
+            <div className="col-lg-4 mb-5">
               <img src="https://i.imgur.com/XgdEeuu.png" className="w-40 h-40" alt="" />
               <h4> {t('Web')}</h4>
               <p>{t('WebIntro')}</p>
               <p><a className="btn btn-outline-primary" href="#">{t('ViewMore')} &raquo;</a></p>
             </div>
 
-            <div className="col-lg-4">
+            <div className="col-lg-4 mb-5">
               <img src="https://i.imgur.com/t8s6d1R.png" className="w-40 h-40" alt="" />
               <h4>{t('AI')}</h4>
               <p>{t('AiIntro')}</p>
               <p><a className="btn btn-outline-primary" href="#">{t('ViewMore')} &raquo;</a></p>
             </div>
 
-            <div className="col-lg-4">
+            <div className="col-lg-4 mb-5">
               <img src="https://i.imgur.com/NkddNlL.jpg" className="w-40 h-40" alt="" />
               <h4>{t('Game')}</h4>
               <p>{t('GameIntro')}</p>
