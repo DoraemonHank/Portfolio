@@ -32,7 +32,21 @@ const WorkHoc = (WrappedComponent, t) => {
             <section className="web">
             </section>
             <br/>
+            {
+                this.state.postData === null &&
+                <div className='loading-container'>
+                    <div className="cube-wrapper">
+                    <div className="cube-folding">
+                        <span className="leaf1"></span>
+                        <span className="leaf2"></span>
+                        <span className="leaf3"></span>
+                        <span className="leaf4"></span>
+                    </div>
+                    <span className="loading" data-name="Loading">Loading</span>
+                    </div>
+                </div>
 
+            }
             {
                 this.state.postData &&
                 <div className='container w-md-50 h-md-50'>
