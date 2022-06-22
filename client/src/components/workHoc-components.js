@@ -1,5 +1,6 @@
 import React from 'react'
 import WorkService from '../services/work.service'
+import LoadingComponents from '../components/loading-components'
 
 const WorkHoc = (WrappedComponent, t) => {
   // eslint-disable-next-line react/display-name
@@ -34,18 +35,7 @@ const WorkHoc = (WrappedComponent, t) => {
             <br/>
             {
                 this.state.postData === null &&
-                <div className='loading-container'>
-                    <div className="cube-wrapper">
-                    <div className="cube-folding">
-                        <span className="leaf1"></span>
-                        <span className="leaf2"></span>
-                        <span className="leaf3"></span>
-                        <span className="leaf4"></span>
-                    </div>
-                    <span className="loading" data-name="Loading">Loading</span>
-                    </div>
-                </div>
-
+                <LoadingComponents/>
             }
             {
                 this.state.postData &&
