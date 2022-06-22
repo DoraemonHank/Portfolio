@@ -15,11 +15,12 @@ import Dropdown from 'bootstrap/js/dist/dropdown'
 import Tab from 'bootstrap/js/dist/tab'
 import Modal from 'bootstrap/js/dist/modal'
 import Offcanvas from 'bootstrap/js/dist/offcanvas'
+import LoadingComponents from './components/loading-components'
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter >
-    <Suspense fallback="loading">
+    <Suspense fallback={<LoadingComponents/>}>
       <App />
     </Suspense>
 
