@@ -70,16 +70,16 @@ const WrappedWorkComponents = ({ postData, t }) => {
             {
                 postData.map((data, index) => (
                     // eslint-disable-next-line react/jsx-key
-                    <div className="mb-5 mt-5 row flex-column flex-md-row">
+                    <div className="mb-5 mt-5 p-5 container flex-column flex-md-row">
                         <h4 className="text-center">{data.title}</h4>
-                        <div className={index % 2 === 0 ? 'col col-md-6 order-md-2' : 'col col-md-6 order-md-1'}>
-                            <div className="d-flex flex-column align-items-center my-5">
-                                <img src={data.imgUrl} className="w-75 h-75 "></img>
-                            </div>
-                        </div>
 
-                        <div className={index % 2 === 0 ? 'align-self-md-center col col-md-6 order-md-1' : 'align-self-center col col-md-6 order-md-2'}>
-                            <table className="table">
+                        <div className="row">
+                            <div className="col col-md-8 offset-md-2">
+                                <div className="d-flex flex-column align-items-center my-5">
+                                    <img src={data.imgUrl} className="w-75 h-75 "></img>
+                                </div>
+
+                                <table className="table">
                                     <thead>
                                         <tr>
                                         <th scope="col">#</th>
@@ -119,9 +119,12 @@ const WrappedWorkComponents = ({ postData, t }) => {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         </div>
+
                     </div>
-                    // eslint-disable-next-line react/jsx-key
+
+                  // eslint-disable-next-line react/jsx-key
 
                 ))
             }

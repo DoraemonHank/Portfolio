@@ -36,8 +36,19 @@ const HomeComponents = ({ t }) => {
 
   return (
     <main>
-        <section className="home">
-        </section>
+        <div className="bg"></div>
+        <div className="hero">
+            <div className="container">
+              <div className='row'>
+                <div className="col-10 offset-md-1">
+                  <h1 className="hero__heading">HELLO <br/>I'M HANK</h1>
+                </div>
+                <div className="col">
+                  <div className="hero__bg"></div>
+                </div>
+              </div>
+            </div>
+        </div>
         <div className="animation" style={animation}>
           <div className="logo">
               <svg width="80" height="99" viewBox="0 0 80 99" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -82,76 +93,74 @@ const HomeComponents = ({ t }) => {
 
         </div>
 
+        <div className="quote bg-color-white lean-bg--top lean-bg--no-margin mt-5">
+            <div className="container">
+                <div className="row">
+                    <div className="offset-sm-3 mt-md-3 col-sm-6 col-sm-push-3">
+                        <div className="quote__content">
+                            <div className="quote__icon">
+                                <i className="icon-quote-right"></i>
+                            </div>
+                            <p className="quote__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quia voluptas atque illo et vel cum? Mollitia quo quos iusto!
+                            </p>
+                            <div className="quote__name">
+                                <span>Somebody</span>
+                                    - from  somewhere
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+         <div className="skill bg-color-white  lean-bg--bottom">
+         <div className="container">
+                <h2 className="subtitle u-text-center ">{t('Skill')}</h2>
+                <div className="skill-group">
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <div className="skill-card position-relative">
+                                <div className="skill-card__inner">
+                                      <h4 className="skill-card__title">{t('Web')}</h4>
+                                      <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p>
+                                </div>
+                                <div className="skill-card__icon">
+                                    <img src="https://i.imgur.com/XgdEeuu.png" alt="html" title="html"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-6">
+                            <div className="skill-card position-relative" data-wow-delay="0.5s">
+                                <div className="skill-card__inner">
+                                      <h4 className="skill-card__title">{t('AI')}</h4>
+                                      <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p>
+                                </div>
+                                <div className="skill-card__icon">
+                                    <img src="https://i.imgur.com/t8s6d1R.png" alt="html" title="html"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-6">
+                            <div className="skill-card position-relative" data-wow-delay="1s">
+                                <div className="skill-card__inner">
+                                      <h4 className="skill-card__title">{t('Game')}</h4>
+                                      <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p>
+                                </div>
+                                <div className="skill-card__icon">
+                                    <img src="https://i.imgur.com/NkddNlL.jpg" alt="html" title="html"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+         </div>
+
         <br/>
-        <div className="container marketing">
-
-          <div className="row ">
-
-            <div className="col-lg-4 mb-5">
-              <img src="https://i.imgur.com/XgdEeuu.png" className="w-40 h-40" alt="" />
-              <h4> {t('Web')}</h4>
-              <p>{t('WebIntro')}</p>
-              <p><a className="btn btn-outline-primary" href="#">{t('ViewMore')} &raquo;</a></p>
-            </div>
-
-            <div className="col-lg-4 mb-5">
-              <img src="https://i.imgur.com/t8s6d1R.png" className="w-40 h-40" alt="" />
-              <h4>{t('AI')}</h4>
-              <p>{t('AiIntro')}</p>
-              <p><a className="btn btn-outline-primary" href="#">{t('ViewMore')} &raquo;</a></p>
-            </div>
-
-            <div className="col-lg-4 mb-5">
-              <img src="https://i.imgur.com/NkddNlL.jpg" className="w-40 h-40" alt="" />
-              <h4>{t('Game')}</h4>
-              <p>{t('GameIntro')}</p>
-              <p><a className="btn btn-outline-primary" href="#">{t('ViewMore')} &raquo;</a></p>
-            </div>
-
-          </div>
-
-          <hr className="featurette-divider"></hr>
-
-          <div className="row featurette">
-            <div className="col-md-7">
-              <h2 className="featurette-heading">First featurette heading. <span className="text-muted">It’ll blow your mind.</span></h2>
-              <p className="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-            </div>
-            <div className="col-md-5">
-              <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
-            </div>
-          </div>
-
-          <hr className="featurette-divider"></hr>
-
-          <div className="row featurette">
-            <div className="col-md-7 order-md-2">
-              <h2 className="featurette-heading">Oh yeah, it’s that good. <span className="text-muted">See for yourself.</span></h2>
-              <p className="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-            </div>
-            <div className="col-md-5 order-md-1">
-              <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
-            </div>
-          </div>
-
-          <hr className="featurette-divider"></hr>
-
-          <div className="row featurette">
-            <div className="col-md-7">
-              <h2 className="featurette-heading">And lastly, this one. <span className="text-muted">Checkmate.</span></h2>
-              <p className="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-            </div>
-            <div className="col-md-5">
-              <svg className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
-            </div>
-          </div>
-
-        <hr className="featurette-divider"></hr>
-
-      </div>
 
     </main>
   )
