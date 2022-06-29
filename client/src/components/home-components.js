@@ -36,20 +36,7 @@ const HomeComponents = ({ t }) => {
 
   return (
     <main>
-        <div className="bg"></div>
-        <div className="hero">
-            <div className="container">
-              <div className='row'>
-                <div className="col-10 offset-md-1">
-                  <h1 className="hero__heading">HELLO <br/>I'M HANK</h1>
-                </div>
-                <div className="col">
-                  <div className="hero__bg"></div>
-                </div>
-              </div>
-            </div>
-        </div>
-        <div className="animation" style={animation}>
+         <div className="animation" style={animation}>
           <div className="logo">
               <svg width="80" height="99" viewBox="0 0 80 99" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M74.0576 96.5H76.5576V94V5.13281V2.63281H74.0576H62.2778H59.7778V5.13281V40.8408H19.978V5.13281V2.63281H17.478H5.75928H3.25928V5.13281V94V96.5H5.75928H17.478H19.978V94V55.4233H59.7778V94V96.5H62.2778H74.0576Z" stroke="white" strokeWidth="2" id="first" className="thePaths"/>
@@ -93,6 +80,26 @@ const HomeComponents = ({ t }) => {
 
         </div>
 
+        {/* Start bg */}
+        <div className="bg"></div>
+        {/* End bg */}
+
+        {/* Start about */}
+        <div className="hero">
+            <div className="container">
+              <div className='row'>
+                <div className="col-10 offset-md-1">
+                  <h1 className="hero__heading">HELLO <br/>I&apos;M HANK</h1>
+                </div>
+                <div className="col">
+                  <div className="hero__bg"></div>
+                </div>
+              </div>
+            </div>
+        </div>
+        {/* End about */}
+
+        {/* Start quote */}
         <div className="quote bg-color-white lean-bg--top lean-bg--no-margin mt-5">
             <div className="container">
                 <div className="row">
@@ -113,9 +120,11 @@ const HomeComponents = ({ t }) => {
                 </div>
             </div>
          </div>
+         {/* End quote */}
 
+         {/* Start skill */}
          <div className="skill bg-color-white  lean-bg--bottom">
-         <div className="container">
+            <div className="container">
                 <h2 className="subtitle u-text-center ">{t('Skill')}</h2>
                 <div className="skill-group">
                     <div className="row">
@@ -154,13 +163,204 @@ const HomeComponents = ({ t }) => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
          </div>
+         {/* End skill */}
 
-        <br/>
+         {/* Start achievements */}
+        <div className="achievements">
+            <div className="container">
+                <h2 className="subtitle u-text-center color-white ">{t('Achievements')}</h2>
+                <div className="timeline-group">
+                    <div className="timeline"></div>
+                    <div className="timeline-cards">
+                        <div className="timeline-cards__row">
+                            <div className="timeline-card ">
+                                <h1 className='timeline-card__title'>Title</h1>
+                                <p className="timeline-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas commodi ratione in vitae nostrum aperiam error consectetur quia vero quo!</p>
+                            </div>
+                        </div>
+                        <div className="timeline-cards__row">
+                            <div className="timeline-card">
+                                <h1 className='timeline-card__title'>Title</h1>
+                                <p className="timeline-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas commodi ratione in vitae nostrum aperiam error consectetur quia vero quo!</p>
+                            </div>
+                        </div>
+                        <div className="timeline-cards__row">
+                            <div className="timeline-card ">
+                                <h1 className='timeline-card__title'>Title</h1>
+                                <p className="timeline-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas commodi ratione in vitae nostrum aperiam error consectetur quia vero quo!</p>
+                            </div>
+                        </div>
+                        <div className="timeline-cards__row">
+                            <div className="timeline-card ">
+                                <h1 className='timeline-card__title'>Title</h1>
+                                <p className="timeline-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas commodi ratione in vitae nostrum aperiam error consectetur quia vero quo!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {/* End achievements */}
+
+        {/* Start work */}
+        <div className="work bg-color-white lean-bg--top lean-bg--bottom">
+            <div className="container">
+                <h2 className="subtitle u-text-center wow bounceInUp">{t('WorkList')}</h2>
+                <div className="work-list">
+                    <div className="work-item  ">
+                        <div className="row">
+                            <div className=" col-sm-8 col-lg-4  order-sm-2">
+                                <div className="imgbox">
+                                    <div className="imgbox__inner imgbox__inner--4-3">
+                                        <div className="image" style={{ backgroundImage: 'url("https://i.imgur.com/GaHGcEv.jpg")' }}></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className=" col-sm-4  col-lg-5 offset-lg-1 order-sm-1" style={{ zIndex: '1' }}>
+                                <div className="work-item__text work-item__text--right">
+                                    <h3 className="work-item__title work-item__title--right" >{t('Web')}</h3>
+                                    <p className="work-item__intro">{t('WebIntro')}</p>
+                                    <a href="#" className="text-btn text-btn--primary text-btn--lg">{t('ViewMore')}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="work-item  ">
+                        <div className="row">
+                            <div className=" col-sm-8 col-lg-4  offset-lg-1 order-sm-1">
+                                <div className="imgbox">
+                                    <div className="imgbox__inner imgbox__inner--4-3">
+                                        <div className="image" style={{ backgroundImage: 'url("https://i.imgur.com/Yif5AQg.jpg")' }}></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4  col-lg-5  order-sm-2" style={{ zIndex: '1' }}>
+                                <div className="work-item__text ">
+                                    <h3 className="work-item__title work-item__title--left">{t('AI')}</h3>
+                                    <p className="work-item__intro">{t('AiIntro')}</p>
+                                    <a href="#" className="text-btn text-btn--primary text-btn--lg">{t('ViewMore')}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="work-item  ">
+                        <div className="row">
+                            <div className="col-sm-8 col-lg-4  order-sm-2">
+                                <div className="imgbox">
+                                    <div className="imgbox__inner imgbox__inner--4-3">
+                                        <div className="image" style={{ backgroundImage: 'url("https://i.imgur.com/gpRxIpX.jpg")' }}></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className=" col-sm-4  col-lg-5 offset-lg-1 order-sm-1" style={{ zIndex: '1' }}>
+                                <div className="work-item__text ">
+                                    <h3 className="work-item__title work-item__title--right">{t('Game')}</h3>
+                                    <p className="work-item__intro">{t('GameIntro')}</p>
+                                    <a href="#" className="text-btn text-btn--primary text-btn--lg">{t('ViewMore')}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* <div className="work-item  ">
+                        <div className="row">
+                            <div className="col-sm-6 col-sm-push-1">
+                                <div className="imgbox">
+                                    <a href="images/works/work002.jpg" data-fancybox="group">
+                                        <div className="imgbox__inner imgbox__inner--4-3">
+                                            <div className="image" style="background-image: url(./images/works/thumbnail/work002_thumb.jpg);"></div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div className="col-sm-4 col-sm-push-1">
+                                <div className="work-item__text ">
+                                    <h3 className="work-item__title work-item__title--left">Work title</h3>
+                                    <p className="work-item__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error modi natus distinctio vitae, minima atque aperiam cupiditate saepe maiores!</p>
+                                    <a href="#" className="text-btn text-btn--primary text-btn--lg">Show project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="work-item  ">
+                        <div className="row">
+                            <div className="col-sm-6 col-sm-push-6">
+                                <div className="imgbox">
+                                    <a href="images/works/work003.jpg" data-fancybox="group">
+                                        <div className="imgbox__inner imgbox__inner--4-3">
+                                            <div className="image" style="background-image: url(./images/works/thumbnail/work003_thumb.jpg);"></div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div className="col-sm-4 col-sm-pull-5">
+                                <div className="work-item__text ">
+                                    <h3 className="work-item__title work-item__title--right">Work title</h3>
+                                    <p className="work-item__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error modi natus distinctio vitae, minima atque aperiam cupiditate saepe maiores!</p>
+                                    <a href="#" className="text-btn text-btn--primary text-btn--lg">Show project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="work-item  ">
+                        <div className="row">
+                            <div className="col-sm-6 col-sm-push-1">
+                                <div className="imgbox">
+                                    <a href="images/works/work004.jpg" data-fancybox="group">
+                                        <div className="imgbox__inner imgbox__inner--4-3">
+                                            <div className="image" style="background-image: url(./images/works/thumbnail/work004_thumb.jpg);"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-sm-4 col-sm-push-1">
+                                <div className="work-item__text ">
+                                    <h3 className="work-item__title ">Work title</h3>
+                                    <p className="work-item__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error modi natus distinctio vitae, minima atque aperiam cupiditate saepe maiores!</p>
+                                    <a href="#" className="text-btn text-btn--primary text-btn--lg">Show project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> */}
+
+                    {/* <div className="work-item  ">
+                        <div className="row">
+                            <div className="col-sm-6 col-sm-push-5">
+                                <div className="imgbox">
+                                    <a href="images/works/work005.jpg" data-fancybox="group">
+                                        <div className="imgbox__inner imgbox__inner--4-3">
+                                            <div className="image" style="background-image: url(./images/works/thumbnail/work005_thumb.jpg);"></div>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div className="col-sm-4 col-sm-pull-5">
+                                <div className="work-item__text work-item__text--right">
+                                    <h3 className="work-item__title work-item__title--right">Work title</h3>
+                                    <p className="work-item__intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error modi natus distinctio vitae, minima atque aperiam cupiditate saepe maiores!</p>
+                                    <a href="#" className="text-btn text-btn--primary text-btn--lg">Show project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> */}
+                </div>
+                {/* <div className="btn-group btn-group--center wow fadeInUp">
+                    <a href="#" className="btn btn--secdonary btn--md">More works</a>
+                </div> */}
+            </div>
+        </div>
+        {/* End work */}
 
     </main>
   )
