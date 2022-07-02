@@ -4,10 +4,16 @@
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "react-scripts test",
     "build": "webpack",
     "dev": "webpack serve",
     "clean": "rm -rf dist"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "author": "",
   "license": "ISC",
@@ -16,9 +22,6 @@
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.17.12",
     "@popperjs/core": "^2.11.5",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.1.4",
-    "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.3.3",
     "axios": "^0.27.2",
     "babel-loader": "^8.2.2",
@@ -51,11 +54,17 @@
   },
   "description": "",
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/user-event": "^13.5.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^8.17.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.3",
     "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.30.0"
+    "eslint-plugin-react": "^7.30.0",
+    "jest": "^28.1.2"
   }
 }

@@ -12,9 +12,13 @@ const WorkHoc = (WrappedComponent, t) => {
       }
     }
 
+    getPost = (currentType) => {
+      return WorkService.getPost(currentType)
+    }
+
     componentDidMount () {
       const currentType = JSON.parse(localStorage.getItem('Type'))
-      WorkService.getPost(currentType)
+      this.getPost(currentType)
         .then(data => {
           this.setState({
             postData: data.data
