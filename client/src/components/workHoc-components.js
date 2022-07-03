@@ -47,7 +47,7 @@ const WorkHoc = (WrappedComponent, t) => {
                      {
                         this.state.postData[0].category === 'web' &&
                         <div className="d-flex justify-content-center">
-                            <h4 className='title text-center'>{t('Web')}</h4>
+                            <h2 className="subtitle u-text-center">{t('Web')}</h2>
                         </div>
 
                      }

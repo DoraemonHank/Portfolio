@@ -7,11 +7,11 @@ const WrappedWorkComponents = ({ postData, t }) => {
   return (
 
     <div>
-        <div className="container">
+        <div className="container mt-4">
             <br/>
             <div className="d-flex flex-column">
                 <div className="d-flex justify-content-center">
-                     <h4 className='title text-center'>{t('Proficiency')}</h4>
+                     <h2 className="subtitle u-text-center">{t('Proficiency')}</h2>
                 </div>
 
                 <div className="row">
@@ -62,15 +62,19 @@ const WrappedWorkComponents = ({ postData, t }) => {
                         </table>
                     </div>
                 </div>
+            </div>
+        </div>
 
+        <div className="container mt-4">
+            <div className="d-flex flex-column">
                 <div className="d-flex justify-content-center">
-                    <h4 className='title text-center'>{t('Collection')}</h4>
+                    <h2 className="subtitle u-text-center">{t('Collection')}</h2>
                 </div>
 
             {
                 postData.map((data, index) => (
                     // eslint-disable-next-line react/jsx-key
-                    <div className="mb-5 mt-5 p-5 container flex-column flex-md-row">
+                    <div className="mb-5  ps-5 pe-5 pb-5 container flex-column flex-md-row">
                         <h4 className="text-center">{data.title}</h4>
 
                         <div className="row">
@@ -121,15 +125,10 @@ const WrappedWorkComponents = ({ postData, t }) => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
-                  // eslint-disable-next-line react/jsx-key
-
                 ))
             }
             </div>
-
         </div>
     </div>
   )
