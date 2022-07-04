@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import NavComponent from './components/nav-components'
 import HomeComponent from './components/home-components'
 import WorkComponents from './components/work-components'
+import Aboutcomponents from './components/about-components'
 import { useTranslation } from 'react-i18next'
 
 const App = () => {
@@ -22,6 +23,10 @@ const App = () => {
             <Switch>
                 <Route path='/' exact>
                     <HomeComponent t={t}/>
+                </Route>
+
+                <Route path='/about' exact>
+                    <Aboutcomponents t={t}/>
                 </Route>
 
                 <Route path={'/' + type} exact>

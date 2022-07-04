@@ -15,8 +15,8 @@
     background-color: #313238;
 }
 
-.title{
-    border-bottom:2px rgb(5, 79, 218) solid; padding-bottom:5px;
+.title-line{
+    border-bottom:3px rgb(5, 193, 218) solid; padding-bottom:5px;
   
   }
 
@@ -202,6 +202,11 @@ h1,h2,h3,h4,h5,h6{
 .u-push-right{float: right !important;}
 .u-pull-left{float: left !important;}
 .u-text-center{text-align: center !important;}
+.card-title__style{
+  font-size: 25px;
+  font-weight: 900;
+  font-family: 'Raleway','Helvetica', 'roboto', arial, sans-serif;
+}
 .subtitle{
   font-size: 38px;
   font-weight: 900;
