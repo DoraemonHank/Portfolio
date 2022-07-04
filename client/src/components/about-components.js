@@ -105,7 +105,7 @@ const Aboutcomponents = () => {
                         <div className="timeline-card">
                             <h4 className="d-md-none">2018/9~2019/3</h4>
                             <h1 className='timeline-card__title'>大眾電腦股份有限公司</h1>
-                            <p className="timeline-card__text">參與桃園市政府的科技執法專案，使用Python搭配Caffe訓練YOLO模型做車流偵測，並且用C++搭配OpenCV實作電腦視覺的算法來後處理，最後用Qt製作UI介面工客戶操作</p>
+                            <p className="timeline-card__text">參與桃園市政府的科技執法專案，使用Python搭配Caffe訓練YOLO模型做車流偵測，並且用C++搭配OpenCV實作電腦視覺的算法來後處理，最後用Qt製作UI介面供客戶操作</p>
                         </div>
                     </div>
                     <div className="timeline-cards__content">
