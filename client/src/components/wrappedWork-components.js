@@ -87,7 +87,7 @@ const WrappedWorkComponents = ({ postData, t }) => {
                                     <thead>
                                         <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">{t('Skill')}</th>
+                                        <th scope="col">{t('Technique')}</th>
                                         <th scope="col">{t('Intro')}</th>
                                         </tr>
                                     </thead>
