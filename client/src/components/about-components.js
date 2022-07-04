@@ -17,7 +17,7 @@ const Aboutcomponents = () => {
                             <p className='fs-5'>嗨!我是李柏漢</p>
                             <p className='fs-5'>擁有8年軟體開發的經驗</p>
                             <p className='fs-5'>現在任職於hTC VIVE，擔任資深軟體工程師</p>
-                            <p className='fs-5'>主要負責AI的相關軟體開發</p>
+                            <p className='fs-5'>主要負責網頁前端和AI的相關軟體開發</p>
                             <p className='fs-5'>目前已擁有2項專利</p>
                         </div>
                     </div>
