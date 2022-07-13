@@ -373,6 +373,9 @@ $time-color:orange;
     .timeline-card__title{
         margin-left: 300px;
     }
+    .timeline-card__long-title{
+        margin-left: 200px;
+    }
 }
 
 .timeline-cards__row:nth-child(even){
@@ -406,9 +409,17 @@ $time-color:orange;
     left: -24px;
     transform: translate(-50%,-50%);
 }
-.timeline-card__title{
-    font-size: 2rem;
+
+
+$timeline-card-map: "title","long-title";
+@each $key in $timeline-card-map {
+    .timeline-card__#{$key}{
+        font-size: 2rem;
+    }
 }
+// .timeline-card__title{
+//     font-size: 2rem;
+// }
 
 .timeline-card__text{
     margin: 0;
@@ -417,6 +428,9 @@ $time-color:orange;
     .timeline-cards__row:nth-child(odd){
         .timeline-card__title{
             margin-left: 180px;
+        }
+        .timeline-card__long-title{
+            margin-left: 80px;
         }
     }
 }
@@ -431,6 +445,9 @@ $time-color:orange;
     .timeline-cards__row:nth-child(odd){
         justify-content: flex-end;
         .timeline-card__title{
+            margin-left: 0rem;
+        }
+        .timeline-card__long-title{
             margin-left: 0rem;
         }
     }

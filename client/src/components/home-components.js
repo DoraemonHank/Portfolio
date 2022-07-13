@@ -174,7 +174,6 @@ const HomeComponents = ({ t }) => {
             <div className="container">
                 <h2 className="subtitle u-text-center color-white ">{t('Achievements')}</h2>
                 <div className="timeline-group">
-                    <div className="timeline"></div>
                     <div className="timeline-cards">
                         <div className="timeline-cards__row">
                             <div className="timeline-card ">
