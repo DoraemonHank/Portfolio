@@ -86,7 +86,7 @@ module.exports = {
   new CopyPlugin({
     patterns: [
       { from: './public/locales', to: './locales' },
-      { from: './public/_redirects', to: './' },
+      { from: './public/_redirects', to: './' }, // Add _redirects to fixed page not found on netlify
       { from: './font', to: './font' }
       // { from: "other", to: "public" },
     ]
