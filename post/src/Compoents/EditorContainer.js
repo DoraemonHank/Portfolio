@@ -56,6 +56,7 @@ class EditorContainer extends Component{
         content:"",
         title:"",
         category:"",
+        lang:"",
         order:0,
         tag:"",
         intro:""
@@ -120,6 +121,14 @@ class EditorContainer extends Component{
 
     };
 
+    handleChangeLang = (e) =>{
+      this.setState({
+        lang: e.target.value
+      },() =>{
+        console.log(this.state.lang);
+      });
+    }
+
     handleChangeOrder = (e) =>{
       this.setState({
         order: e.target.value
@@ -148,7 +157,7 @@ class EditorContainer extends Component{
 
     handleSubmit = () =>{
       PostService.post(this.state.title,this.state.category,
-        this.state.order,this.state.tag,this.state.intro,this.state.imgUrl,this.state.content
+        this.state.order,this.state.tag,this.state.intro,this.state.imgUrl,this.state.lang,this.state.content
         )
       .then(response =>{
         console.log(response);
@@ -180,6 +189,17 @@ class EditorContainer extends Component{
                 <option value="unity">遊戲開發</option>
               </select>
               <label for="floatingSelect">Category</label>
+          </div>
+          <div class="form-floating mb-3">
+              <select class="form-select" id="floatingSelect" 
+              aria-label="Floating label select example"
+              onChange={this.handleChangeLang}
+              >
+                <option ></option>
+                <option value="tw">中文</option>
+                <option value="en">英文</option>
+              </select>
+              <label for="floatingSelect">語言</label>
           </div>
           <div class="form-floating mb-3"> 
             <input type="number" class="form-control" id="floatingInput" placeholder="xxx" 
