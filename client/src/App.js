@@ -4,10 +4,12 @@ import NavComponent from './components/nav-components'
 import HomeComponent from './components/home-components'
 import WorkComponents from './components/work-components'
 import Aboutcomponents from './components/about-components'
+import ArticleComponents from './components/article-components'
 import { useTranslation } from 'react-i18next'
 
 const App = () => {
   const [type, setType] = useState('')
+  const [article, setArticle] = useState({})
   const { t, i18n } = useTranslation()
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng)
@@ -30,7 +32,11 @@ const App = () => {
                 </Route>
 
                 <Route path={'/' + type} exact>
-                    <WorkComponents t={t}/>
+                    <WorkComponents t={t} setArticle={setArticle}/>
+                </Route>
+
+                <Route path='/post' exact>
+                    <ArticleComponents article={article}/>
                 </Route>
             </Switch>
 

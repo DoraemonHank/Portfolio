@@ -59,6 +59,7 @@ class EditorContainer extends Component{
         lang:"",
         order:0,
         tag:"",
+        demo:"",
         intro:""
       };
     }
@@ -153,11 +154,18 @@ class EditorContainer extends Component{
         console.log(this.state.intro);
       });
     }
-  
+    
+    handleChangeDemo = (e) =>{
+      this.setState({
+        demo: e.target.value
+      },() =>{
+        console.log(this.state.demo);
+      });
+    }
 
     handleSubmit = () =>{
       PostService.post(this.state.title,this.state.category,
-        this.state.order,this.state.tag,this.state.intro,this.state.imgUrl,this.state.lang,this.state.content
+        this.state.order,this.state.tag,this.state.intro,this.state.imgUrl,this.state.lang,this.state.demo,this.state.content
         )
       .then(response =>{
         console.log(response);
@@ -215,6 +223,11 @@ class EditorContainer extends Component{
             <input type="text" class="form-control" id="floatingInput" placeholder="xxx" 
              onChange={this.handleChangeIntro}/>
             <label for="floatingInput">Intro</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="xxx" 
+             onChange={this.handleChangeDemo}/>
+            <label for="floatingInput">Demo</label>
           </div>
           <h1>圖片預覽與檔案上傳</h1>
           <div className="container">

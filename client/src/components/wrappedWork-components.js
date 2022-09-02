@@ -1,9 +1,16 @@
 import React, { useEffect } from 'react'
+import { useHistory } from 'react-router'
 
-const WrappedWorkComponents = ({ postData, t }) => {
+const WrappedWorkComponents = ({ postData, t, setArticle }) => {
+  const history = useHistory()
   useEffect(() => {
     console.log(postData)
   }, [])
+
+  const onHandleDetail = (post) => {
+    setArticle(post)
+    history.push('/post')
+  }
   return (
 
     <div>
@@ -101,8 +108,9 @@ const WrappedWorkComponents = ({ postData, t }) => {
                                 </table>
                                 <div className='d-flex justify-content-center'>
                                     <button className="btn btn-outline-primary"
-                                    data-bs-toggle="modal" data-bs-target={'#staticBackdrop' + index.toString(2)}>{t('DetailIntro')}</button>
-                                    <button className="btn btn-outline-primary ms-5">Demo</button>
+                                    data-bs-toggle="modal" data-bs-target={'#staticBackdrop' + index.toString(2)}>預覽介紹</button>
+                                    <button className="btn btn-outline-primary ms-5" onClick={() => { onHandleDetail(data) } }>{t('DetailIntro')}</button>
+                                    <a target='_blank' href={data.demo} className="btn btn-outline-primary ms-5" rel="noreferrer">Demo</a>
                                 </div>
 
                                 {/*  Modal  */}

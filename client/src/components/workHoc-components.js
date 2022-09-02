@@ -2,7 +2,7 @@ import React from 'react'
 import WorkService from '../services/work.service'
 import LoadingComponents from '../components/loading-components'
 
-const WorkHoc = (WrappedComponent, t) => {
+const WorkHoc = (WrappedComponent, t, setArticle) => {
   // eslint-disable-next-line react/display-name
   return class extends React.Component {
     constructor (props) {
@@ -87,7 +87,7 @@ const WorkHoc = (WrappedComponent, t) => {
             }
             {
                 this.state.postData &&
-                <WrappedComponent postData={this.state.postData} t={t}/>
+                <WrappedComponent postData={this.state.postData} t={t} setArticle={setArticle} />
             }
 
         </div>
