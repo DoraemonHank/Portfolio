@@ -24,7 +24,7 @@ const App = () => {
 
             <Switch>
                 <Route path='/' exact>
-                    <HomeComponent t={t}/>
+                    <HomeComponent t={t} setType={setType}/>
                 </Route>
 
                 <Route path='/about' exact>

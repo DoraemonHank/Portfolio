@@ -95,6 +95,30 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
                             </table>
                         }
 
+                        {
+                            postData[0].category === 'game' &&
+                            <table className="table">
+                                <tr>
+                                    <td className="pb-3">程式語言</td>
+                                    <td className="pb-3">
+                                        C#
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td className="pb-3 pt-3">遊戲引擎</td>
+                                    <td className="pb-3 pt-3">Unity</td>
+                                </tr>
+                                <tr >
+                                    <td className="pb-3 pt-3">套件</td>
+                                    <td className="pb-3 pt-3">SRanipal SDK</td>
+                                </tr>
+                                <tr>
+                                    <td className="pb-3 pt-3">版本管理</td>
+                                    <td className="pb-3 pt-3">Github、GibLab、Gerrit</td>
+                                </tr>
+                            </table>
+                        }
+
                     </div>
                 </div>
             </div>

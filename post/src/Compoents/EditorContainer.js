@@ -194,7 +194,7 @@ class EditorContainer extends Component{
                 <option ></option>
                 <option value="web">網頁開發</option>
                 <option value="dl">深度學習</option>
-                <option value="unity">遊戲開發</option>
+                <option value="game">遊戲開發</option>
               </select>
               <label for="floatingSelect">Category</label>
           </div>

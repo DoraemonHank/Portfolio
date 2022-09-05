@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router'
 import '../../style/opening_animation.scss'
 import '../../style/index.scss'
 
-const HomeComponents = ({ t }) => {
+const HomeComponents = ({ t, setType }) => {
   const lastWord = useRef()
 
   const [animation, setAnimation] = useState({})
-
+  const history = useHistory()
   useEffect(() => {
     if (lastWord && lastWord.current) {
       lastWord.current.addEventListener('animationend', () => {
@@ -33,6 +35,24 @@ const HomeComponents = ({ t }) => {
       })
     }
   }, [])
+
+  const onLinkToWeb = () => {
+    setType('web')
+    localStorage.setItem('Type', JSON.stringify('web'))
+    history.push('/web')
+  }
+
+  const onLinkToDl = () => {
+    setType('dl')
+    localStorage.setItem('Type', JSON.stringify('dl'))
+    history.push('/dl')
+  }
+
+  const onLinkToGame = () => {
+    setType('game')
+    localStorage.setItem('Type', JSON.stringify('game'))
+    history.push('/game')
+  }
 
   return (
     <main>
@@ -223,7 +243,7 @@ const HomeComponents = ({ t }) => {
                                 <div className="work-item__text work-item__text--right">
                                     <h3 className="work-item__title work-item__title--right" >{t('Web')}</h3>
                                     <p className="work-item__intro">{t('WebIntro')}</p>
-                                    <a href="#" className="text-btn text-btn--primary text-btn--lg">{t('ViewMore')}</a>
+                                    <Link className="text-btn text-btn--primary text-btn--lg" onClick={onLinkToWeb}>{t('ViewMore')}</Link>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +262,7 @@ const HomeComponents = ({ t }) => {
                                 <div className="work-item__text ">
                                     <h3 className="work-item__title work-item__title--left">{t('AI')}</h3>
                                     <p className="work-item__intro">{t('AiIntro')}</p>
-                                    <a href="#" className="text-btn text-btn--primary text-btn--lg">{t('ViewMore')}</a>
+                                    <Link className="text-btn text-btn--primary text-btn--lg" onClick={ onLinkToDl }>{t('ViewMore')}</Link>
                                 </div>
                             </div>
                         </div>
@@ -261,7 +281,7 @@ const HomeComponents = ({ t }) => {
                                 <div className="work-item__text ">
                                     <h3 className="work-item__title work-item__title--right">{t('Game')}</h3>
                                     <p className="work-item__intro">{t('GameIntro')}</p>
-                                    <a href="#" className="text-btn text-btn--primary text-btn--lg">{t('ViewMore')}</a>
+                                    <Link className="text-btn text-btn--primary text-btn--lg" onClick={ onLinkToGame }>{t('ViewMore')}</Link>
                                 </div>
                             </div>
                         </div>

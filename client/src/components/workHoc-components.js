@@ -70,6 +70,13 @@ const WorkHoc = (WrappedComponent, t, setArticle) => {
                         </div>
 
                      }
+                     {
+                        this.state.postData[0].category === 'game' &&
+                        <div className="d-flex justify-content-center">
+                            <h2 className="subtitle u-text-center">{t('Game')}</h2>
+                        </div>
+
+                     }
                      <Slider {...this.state.settings}>
                         {
                            this.state.postData.map((data) =>
