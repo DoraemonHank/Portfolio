@@ -1,6 +1,9 @@
 import React from 'react'
 import WorkService from '../services/work.service'
 import LoadingComponents from '../components/loading-components'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import Slider from 'react-slick'
 
 const WorkHoc = (WrappedComponent, t, setArticle) => {
   // eslint-disable-next-line react/display-name
@@ -8,7 +11,16 @@ const WorkHoc = (WrappedComponent, t, setArticle) => {
     constructor (props) {
       super(props)
       this.state = {
-        postData: null
+        postData: null,
+        settings: {
+          dots: true,
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
       }
     }
 
@@ -58,38 +70,16 @@ const WorkHoc = (WrappedComponent, t, setArticle) => {
                         </div>
 
                      }
-                    <div id="carouselExampleControls" className="carousel slide border border-5" data-bs-ride="carousel">
-                        <div className="carousel-inner">
-
-                            {
-                                this.state.postData.map((data, index) => (
-                                  // eslint-disable-next-line react/jsx-key
-                                  index === 0 &&
-                                    <div className="carousel-item active">
-                                        <img src={data.imgUrl} className="d-block w-100" alt="..." />
-                                    </div>
-                                ))
-                            }
-                            {
-                                this.state.postData.map((data, index) => (
-                                  // eslint-disable-next-line react/jsx-key
-                                  index !== 0 &&
-                                    <div className="carousel-item ">
-                                        <img src={data.imgUrl} className="d-block w-100" alt="..." />
-                                    </div>
-                                ))
-                            }
-
-                        </div>
-                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Previous</span>
-                        </button>
-                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Next</span>
-                        </button>
-                    </div>
+                     <Slider {...this.state.settings}>
+                        {
+                           this.state.postData.map((data) =>
+                              // eslint-disable-next-line react/jsx-key
+                              <div >
+                                <img src={data.imgUrl} className="d-block w-100" alt="..." />
+                              </div>
+                           )
+                        }
+                      </Slider>
                 </div>
             }
             {
