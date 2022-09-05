@@ -12,7 +12,7 @@ const ArticleComponents = ({ article }) => {
   return (
 
     <div>
-        <section className="web"></section>
+        <section className="portfolio"></section>
         <div className="container">
           <h4 className="text-center">{article.title}</h4>
           <div className="d-flex justify-content-center">
