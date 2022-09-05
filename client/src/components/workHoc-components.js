@@ -93,12 +93,4 @@ const WorkHoc = (WrappedComponent, t, setArticle) => {
   }
 }
 
-// function WorkHoc (WrappedComponent) {
-//   return class extends React.Component {
-//     render () {
-//       return <WrappedComponent />
-//     }
-//   }
-// }
-
 export default WorkHoc
