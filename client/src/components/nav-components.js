@@ -37,6 +37,11 @@ const NavComponent = (props) => {
     localStorage.setItem('Type', JSON.stringify('web'))
   }
 
+  const onLinkDl = () => {
+    setType('dl')
+    localStorage.setItem('Type', JSON.stringify('dl'))
+  }
+
   return (
         <div>
             <nav style={{
@@ -75,7 +80,7 @@ const NavComponent = (props) => {
                             </li>
 
                             <li >
-                                <Link className="fs-5" to="/">
+                                <Link className="fs-5" to="/dl" onClick={onLinkDl}>
                                     {t('AI')}
                                 </Link>
                             </li>

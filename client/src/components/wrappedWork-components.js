@@ -23,50 +23,78 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
 
                 <div className="row">
                     <div className="col col-md-8 offset-md-2">
-                        <table className="table">
-                            <tr>
-                                <td className="pb-3">程式語言</td>
-                                <td className="pb-3">
-                                    HTML、CSS、JavaScript
-                                </td>
-                            </tr>
-                            <tr >
-                                <td className="pb-3 pt-3">使用框架</td>
-                                <td className="pb-3 pt-3">React、Next.js、Node.js、Express</td>
-                            </tr>
-                            <tr >
-                                <td className="pb-3 pt-3">CSS處理</td>
-                                <td className="pb-3 pt-3">SCSS、Bootstrap5</td>
-                            </tr>
-                            <tr >
-                                <td className="pb-3 pt-3">套件</td>
-                                <td className="pb-3 pt-3">i18n、Draft.js</td>
-                            </tr>
-                            <tr >
-                                <td className="pb-3 pt-3">單元測試</td>
-                                <td className="pb-3 pt-3">Jest</td>
-                            </tr>
-                            <tr >
-                                <td className="pb-3 pt-3">檢查工具</td>
-                                <td className="pb-3 pt-3">ESLint</td>
-                            </tr>
-                            <tr >
-                                <td className="pb-3 pt-3">打包工具</td>
-                                <td className="pb-3 pt-3">Webpack</td>
-                            </tr>
-                            <tr>
-                                <td className="pb-3 pt-3">資料庫</td>
-                                <td className="pb-3 pt-3">MongoDB(Mongoose)、Firebase</td>
-                            </tr>
-                            <tr>
-                                <td className="pb-3 pt-3">伺服器</td>
-                                <td className="pb-3 pt-3">GCP、Heroku</td>
-                            </tr>
-                            <tr>
-                                <td className="pb-3 pt-3">版本管理</td>
-                                <td className="pb-3 pt-3">Github、GibLab、Gerrit</td>
-                            </tr>
-                        </table>
+                        {
+                            postData[0].category === 'web' &&
+                            <table className="table">
+                                <tr>
+                                    <td className="pb-3">程式語言</td>
+                                    <td className="pb-3">
+                                        HTML、CSS、JavaScript
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td className="pb-3 pt-3">使用框架</td>
+                                    <td className="pb-3 pt-3">React、Next.js、Node.js、Express</td>
+                                </tr>
+                                <tr >
+                                    <td className="pb-3 pt-3">CSS處理</td>
+                                    <td className="pb-3 pt-3">SCSS、Bootstrap5</td>
+                                </tr>
+                                <tr >
+                                    <td className="pb-3 pt-3">套件</td>
+                                    <td className="pb-3 pt-3">i18next、Draft.js、ECharts</td>
+                                </tr>
+                                <tr >
+                                    <td className="pb-3 pt-3">單元測試</td>
+                                    <td className="pb-3 pt-3">Jest</td>
+                                </tr>
+                                <tr >
+                                    <td className="pb-3 pt-3">檢查工具</td>
+                                    <td className="pb-3 pt-3">ESLint</td>
+                                </tr>
+                                <tr >
+                                    <td className="pb-3 pt-3">打包工具</td>
+                                    <td className="pb-3 pt-3">Webpack</td>
+                                </tr>
+                                <tr>
+                                    <td className="pb-3 pt-3">資料庫</td>
+                                    <td className="pb-3 pt-3">MongoDB(Mongoose)、Firebase</td>
+                                </tr>
+                                <tr>
+                                    <td className="pb-3 pt-3">伺服器</td>
+                                    <td className="pb-3 pt-3">GCP、Heroku</td>
+                                </tr>
+                                <tr>
+                                    <td className="pb-3 pt-3">版本管理</td>
+                                    <td className="pb-3 pt-3">Github、GibLab、Gerrit</td>
+                                </tr>
+                            </table>
+                        }
+
+                        {
+                            postData[0].category === 'dl' &&
+                            <table className="table">
+                                <tr>
+                                    <td className="pb-3">程式語言</td>
+                                    <td className="pb-3">
+                                        Python
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td className="pb-3 pt-3">使用框架</td>
+                                    <td className="pb-3 pt-3">Tensorflow、Keras、Caffe</td>
+                                </tr>
+                                <tr >
+                                    <td className="pb-3 pt-3">套件</td>
+                                    <td className="pb-3 pt-3">numpy、matplot、pandas</td>
+                                </tr>
+                                <tr>
+                                    <td className="pb-3 pt-3">版本管理</td>
+                                    <td className="pb-3 pt-3">Github、GibLab、Gerrit</td>
+                                </tr>
+                            </table>
+                        }
+
                     </div>
                 </div>
             </div>

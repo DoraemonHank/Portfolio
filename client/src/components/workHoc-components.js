@@ -34,7 +34,7 @@ const WorkHoc = (WrappedComponent, t, setArticle) => {
     render () {
       return (
         <div>
-            <section className="web">
+            <section className="portfolio">
             </section>
             <br/>
             {
@@ -48,6 +48,13 @@ const WorkHoc = (WrappedComponent, t, setArticle) => {
                         this.state.postData[0].category === 'web' &&
                         <div className="d-flex justify-content-center">
                             <h2 className="subtitle u-text-center">{t('Web')}</h2>
+                        </div>
+
+                     }
+                     {
+                        this.state.postData[0].category === 'dl' &&
+                        <div className="d-flex justify-content-center">
+                            <h2 className="subtitle u-text-center">{t('AI')}</h2>
                         </div>
 
                      }
