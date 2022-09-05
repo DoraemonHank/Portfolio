@@ -38,6 +38,11 @@ const App = () => {
                 <Route path='/post' exact>
                     <ArticleComponents article={article}/>
                 </Route>
+
+                <Route path='*' exact>
+                    <section className="portfolio"></section>
+                    <h1>404 Page not found!!</h1>
+                </Route>
             </Switch>
 
         </div>
