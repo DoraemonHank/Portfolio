@@ -10,6 +10,7 @@ const HomeComponents = ({ t, setType }) => {
   const [animation, setAnimation] = useState({})
   const history = useHistory()
   useEffect(() => {
+    window.scrollTo(0, 0)
     if (lastWord && lastWord.current) {
       lastWord.current.addEventListener('animationend', () => {
         setAnimation(

@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactEcharts from 'echarts-for-react'
 
 const Aboutcomponents = ({ t }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
   return (
     <div>
         <section className="about">
