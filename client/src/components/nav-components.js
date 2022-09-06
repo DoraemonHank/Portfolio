@@ -60,7 +60,7 @@ const NavComponent = (props) => {
                         </select>
                     </div>
                     <div id="mainListDiv" className={'main_list ' + mainListDiv} >
-                        <ul className="navlinks">
+                        <ul>
                             <li>
                                 <Link className="fs-5 active" to="/">
                                     {t('HomePage')}
