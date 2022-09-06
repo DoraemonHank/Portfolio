@@ -5,6 +5,7 @@ import HomeComponent from './components/home-components'
 import WorkComponents from './components/work-components'
 import Aboutcomponents from './components/about-components'
 import ArticleComponents from './components/article-components'
+import FooterComponents from './components/footer-components'
 import { useTranslation } from 'react-i18next'
 
 const App = () => {
@@ -45,6 +46,7 @@ const App = () => {
                 </Route>
             </Switch>
 
+            <FooterComponents t={t} setType={setType}/>
         </div>
   )
 }

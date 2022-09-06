@@ -1,0 +1,117 @@
+$primary-light-blue: #8DB9ED;
+$primary-line-color: #ccc;
+ul {
+    list-style: none
+}
+a {
+text-decoration: none
+}
+
+.generic-anchor {
+	color: $primary-light-blue;
+	&:visited {
+		color: $primary-light-blue
+	}
+	&:hover {
+		color: $primary-line-color
+	}
+}
+.generic-anchor .icon{
+    display: block;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.generic-anchor .icon:hover{
+    transform: translateY(-20%);
+}
+
+.flex-rw {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .footer-social-section {
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 5px;
+  }
+  .footer-social-section::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 10px;
+    border-top: 1px solid $primary-line-color;
+    width: calc(100% - 20px);
+  }
+
+  .footer-social-overlap {
+    position: relative;
+    z-index: 1;
+    background: $dark;
+    padding: 0 20px
+  }
+
+  .footer-social-connect {
+    display: flex;
+    align-items: center;
+    font: 3.5em "Oswald", sans-serif;
+    color: #fff
+  }
+
+  .footer-social-small {
+    font-size: 0.6em;
+    padding: 0px 20px
+  }
+
+  .footer-social-connect {
+    display: flex;
+    align-items: center;
+    font: 3.5em "Oswald", sans-serif;
+    color: #fff
+  }
+  .footer-social-small {
+    font-size: 0.6em;
+    padding: 0px 20px
+  }
+  .footer-social-overlap > a {
+    font-size: 2.5em
+  }
+  .footer-social-overlap > a:not(:first-child) {
+    margin-left: 0.38em
+  }
+  .footer-bottom-section {
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid $primary-line-color;
+    margin-top: 10px
+  }
+  .footer-bottom-section > div:first-child {
+    margin-right: auto
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.5em;
+    color: #fff
+  }
+  .copyright {
+    display: inline;
+    font-style: normal
+  }
+
+  @media screen and (max-width: 768px) {
+    .flex-rw{
+        flex-direction: column;
+    }
+    .footer-social-connect{
+        margin-top: 3rem;
+    }
+    .footer-social-overlap >a{
+        font-size: 2rem;
+        margin: 0 2rem;
+    }
+  }
+
+  
