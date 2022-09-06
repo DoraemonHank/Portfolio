@@ -4,6 +4,7 @@ import { useHistory } from 'react-router'
 const ArticleComponents = ({ article }) => {
   const history = useHistory()
   useEffect(() => {
+    window.scroll(0, 0)
     console.log(JSON.parse(localStorage.getItem('Type')))
     if (JSON.stringify(article) === '{}') {
       history.push('/' + JSON.parse(localStorage.getItem('Type')))
