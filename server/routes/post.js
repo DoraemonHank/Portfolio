@@ -42,10 +42,10 @@ router.post("/post",async (req,res) =>{
 })
 
 
-router.get("/getPost/:category",(req,res) =>{
-    let {category} = req.params;
-    console.log(category)
-    Post.find({category: category})
+router.get("/getPost/:category/:lang",(req,res) =>{
+    let {category,lang} = req.params;
+    console.log(category,lang)
+    Post.find({category: category,lang:lang})
     .then(data =>{
         //console.log(data)
         res.send(data)

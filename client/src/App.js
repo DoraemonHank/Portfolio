@@ -11,9 +11,11 @@ import { useTranslation } from 'react-i18next'
 const App = () => {
   const [type, setType] = useState('')
   const [article, setArticle] = useState({})
+  const [articleLang, setArticleLang] = useState('tw')
   const { t, i18n } = useTranslation()
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng)
+    setArticleLang(articleLang === 'tw' ? 'en' : 'tw')
   }
   useEffect(() => {
     setType(JSON.parse(localStorage.getItem('Type')))
@@ -33,7 +35,7 @@ const App = () => {
                 </Route>
 
                 <Route path={'/' + type} exact>
-                    <WorkComponents t={t} setArticle={setArticle}/>
+                    <WorkComponents articleLang={articleLang} t={t} setArticle={setArticle}/>
                 </Route>
 
                 <Route path='/post' exact>

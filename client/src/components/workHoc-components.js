@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 
-const WorkHoc = (WrappedComponent, t, setArticle) => {
+const WorkHoc = (WrappedComponent, articleLang, t, setArticle) => {
   // eslint-disable-next-line react/display-name
   return class extends React.Component {
     constructor (props) {
@@ -24,13 +24,13 @@ const WorkHoc = (WrappedComponent, t, setArticle) => {
       }
     }
 
-    getPost = (currentType) => {
-      return WorkService.getPost(currentType)
+    getPost = (currentType, articleLang) => {
+      return WorkService.getPost(currentType, articleLang)
     }
 
     componentDidMount () {
       const currentType = JSON.parse(localStorage.getItem('Type'))
-      this.getPost(currentType)
+      this.getPost(currentType, articleLang)
         .then(data => {
           this.setState({
             postData: data.data
