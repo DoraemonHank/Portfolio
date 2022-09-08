@@ -46,7 +46,7 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
                                 </tr>
                                 <tr >
                                     <td className="pb-3 pt-3">單元測試</td>
-                                    <td className="pb-3 pt-3">Jest</td>
+                                    <td className="pb-3 pt-3">Jest、Enzyme</td>
                                 </tr>
                                 <tr >
                                     <td className="pb-3 pt-3">檢查工具</td>
