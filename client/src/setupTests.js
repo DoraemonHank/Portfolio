@@ -1,3 +1,4 @@
+/* eslint-disable no-empty-function */
 import '@testing-library/jest-dom/extend-expect'
 
 const localStorageMock = {
@@ -9,5 +10,13 @@ const localStorageMock = {
   removeItem: jest.fn(),
   // eslint-disable-next-line no-undef
   clear: jest.fn()
+}
+
+window.matchMedia = window.matchMedia || function () {
+  return {
+    matches: false,
+    addListener: function () {},
+    removeListener: function () {}
+  }
 }
 global.localStorage = localStorageMock
