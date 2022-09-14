@@ -177,6 +177,18 @@ const Aboutcomponents = ({ t }) => {
                     <a target="_blank" href="https://www.vive.com/tw/accessory/facial-tracker/" className="btn btn-outline-secondary rounded-pill" rel="noreferrer">前往查看 &gt;</a>
                 </div>
             </div>
+            <div className="card mb-5">
+                <div className="card-header">
+                    Udemy課程講師
+                </div>
+                <div className="card-body">
+                    <h5 className="card-title">Udemy線上授課</h5>
+                    <p className="card-text">
+                         目前上架了C語言的教學課程
+                        </p>
+                    <a target="_blank" href="https://www.udemy.com/user/ke-ai-ma-nong/" className="btn btn-outline-secondary rounded-pill" rel="noreferrer">前往查看 &gt;</a>
+                </div>
+            </div>
         </div>
         <br/>
 
