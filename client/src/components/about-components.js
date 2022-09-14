@@ -76,7 +76,7 @@ const Aboutcomponents = ({ t }) => {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 mb-5">
                     <div className="card">
                         <div className="card-body">
                             <div className="d-flex">
