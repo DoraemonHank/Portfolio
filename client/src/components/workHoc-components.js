@@ -77,16 +77,19 @@ const WorkHoc = (WrappedComponent, articleLang, t, setArticle) => {
                         </div>
 
                      }
-                     <Slider {...this.state.settings}>
-                        {
-                           this.state.postData.map((data) =>
-                              // eslint-disable-next-line react/jsx-key
-                              <div >
-                                <img src={data.imgUrl} className="d-block w-100" alt="..." />
-                              </div>
-                           )
-                        }
-                      </Slider>
+                     <div className="ps-4 pe-4">
+                        <Slider {...this.state.settings}>
+                            {
+                              this.state.postData.map((data) =>
+                                  // eslint-disable-next-line react/jsx-key
+                                  <div >
+                                    <img src={data.imgUrl} className="d-block w-100" alt="..." />
+                                  </div>
+                              )
+                            }
+                          </Slider>
+                     </div>
+
                 </div>
             }
             {
