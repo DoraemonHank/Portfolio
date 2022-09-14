@@ -1,6 +1,7 @@
 $pink:#e881a7;
 $black:rgb(105, 105, 105);
 $time-color:orange;
+$default-color:#70a7eb;
 
 /* text btn */
 .text-btn{
@@ -18,7 +19,7 @@ $time-color:orange;
 }
 
 .text-btn.text-btn--primary{
-    color: orange;
+    color: $default-color;
 }
 
 .text-btn.text-btn--lg{
@@ -35,7 +36,7 @@ $time-color:orange;
     left: 0;
     width: 0%;
     height: 2px;
-    background-color: orange;
+    background-color: $default-color;
     transition: all 0.3s;
 }
 
@@ -176,7 +177,7 @@ $time-color:orange;
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background-color: orange;
+    background-color: $default-color;
     text-align: center;
     line-height: 64px;
     font-size: 32px;
@@ -198,7 +199,7 @@ $time-color:orange;
     color: black;
 }
 .quote__name span{
-    color: orange;
+    color:$default-color;
 }
 
 
@@ -288,7 +289,7 @@ $time-color:orange;
     padding-left: 48px;
 }
 .skill-card__title{
-    color: orange;
+    color: $default-color;
     font-family: 'Raleway','Helvetica', 'roboto', arial, sans-serif;
     margin-top: 0;
     margin-bottom: 8px;
@@ -359,7 +360,7 @@ $time-color:orange;
 .timeline{
     width: 4px;
     height: 100%;
-    background-color: $time-color;
+    background-color: $default-color;
     position: absolute;
     top: 0;
     left: 50%;
@@ -395,7 +396,7 @@ $time-color:orange;
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: $time-color;
+    background-color: $default-color;
     position: absolute;
     top: 50%;
     
