@@ -5,6 +5,7 @@ import HomeComponent from './components/home-components'
 import WorkComponents from './components/work-components'
 import Aboutcomponents from './components/about-components'
 import ArticleComponents from './components/article-components'
+import ContactComponrnts from './components/contact-componrnts'
 import FooterComponents from './components/footer-components'
 import { useTranslation } from 'react-i18next'
 
@@ -40,6 +41,10 @@ const App = () => {
 
                 <Route path='/post' exact>
                     <ArticleComponents article={article}/>
+                </Route>
+
+                <Route path='/contact' exact>
+                    <ContactComponrnts t={t}/>
                 </Route>
 
                 <Route path='*' exact>

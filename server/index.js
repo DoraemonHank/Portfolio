@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const postRoute = require("./routes").post;
 const imgRoute = require("./routes").image;
+const contactRoute = require('./routes').contact;
 const cors = require("cors");
 
 // connect to DB
@@ -25,6 +26,7 @@ app.use(express.urlencoded({extended : true}));
 app.use(cors());
 app.use("/api/user",postRoute);
 app.use("/api/img",imgRoute);
+app.use("/api/contact",contactRoute);
 
 const port = process.env.PORT || 8081;
 

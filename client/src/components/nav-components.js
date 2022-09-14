@@ -86,7 +86,7 @@ const NavComponent = (props) => {
                             </li>
 
                             <li >
-                                <Link className="fs-5" to="/">
+                                <Link className="fs-5" to="/contact">
                                     {t('Contact')}
                                 </Link>
                             </li>
