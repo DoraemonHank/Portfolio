@@ -80,6 +80,18 @@ const Aboutcomponents = ({ t }) => {
                     <div className="card">
                         <div className="card-body">
                             <div className="d-flex">
+                                <h5 className=" title-line card-title__style ">SDK</h5>
+                            </div>
+                            <p className="card-text">
+                                VIVE VR頭盔專用的SDK，提供給VR的開發者使用，讓開發者可以使用眼球追蹤和唇形追蹤的API來應用。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-6">
+                    <div className="card">
+                        <div className="card-body">
+                            <div className="d-flex">
                                 <h5 className=" title-line card-title__style ">UEFI BIOS</h5>
                             </div>
                             <p className="card-text">
