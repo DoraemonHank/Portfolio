@@ -1,0 +1,240 @@
+/*-------------------------*/
+/* $Contact
+---------------------------*/
+.contact{
+    padding: 80px 0;
+}
+@media (max-width:768px){
+    .contact{
+        padding: 40px 0;
+    }
+}
+/* form
+---------------------*/
+.form{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form input[type="text"],
+.form input[type="tel"],
+.form input[type="email"],
+.form textarea{
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 4px;
+    vertical-align: top;
+    box-sizing: border-box;
+    background-color: inherit;
+    color: rgb(0, 0, 0);
+}
+
+.form textarea{
+    resize: none;
+}
+
+.form input[type="text"]:focus,
+.form input[type="tel"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus{
+    outline: 0;
+    border: 1px solid #609ee9;
+}
+
+.form label{
+    margin-bottom: 8px;
+    display: inline-block;
+    color: white;
+}
+.form__btn-group{
+    margin-top: 32px;
+}
+
+/* divide-text
+---------------------*/
+.divide-text{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-size: 28px;
+    line-height: 32px;
+    color: #fefefe;
+}
+
+/* info
+---------------------*/
+.info{
+    text-align: center;
+}
+.info__email{
+    margin-bottom: 16px;
+}
+.info__email a{
+    color: #609ee9;
+    font-size: 18px;
+    font-weight: 400;
+}
+.info__phone{
+    margin-bottom: 16px;
+}
+.info__phone a{
+    color: #fefefe;
+    font-size: 24px;
+    font-weight: 400;
+}
+.info__social-bar .icon-btn{
+    color: #609ee9;
+}
+
+/* btn 
+-----------------------*/
+/* normal */
+.my-btn{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    height: 32px;
+    line-height: 36px;
+    padding: 0 16px;
+    min-width: 64px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    font-family: 'Helvetica', 'roboto', arial, sans-serif;
+    letter-spacing: 0;
+    text-decoration: none;
+    background-color: #d1d2d3;
+    border: 0;
+    border-radius: 18px;
+    outline: 0;
+    cursor: pointer;
+    overflow: hidden;
+    user-select:none;
+    -webkit-user-drag: none;
+    transition: all 0.3s;
+}
+.btn--primary,
+.btn--secdonary
+{
+    color: #fefefe;
+}
+.my-btn.btn--primary{
+    background-color: #609ee9;
+}
+.my-btn.btn--primary:hover,
+.my-btn.btn--primary:active{
+    background-color: #3683e0;
+    color: #fefefe;
+}
+
+.my-btn.btn--secdonary{
+    background-color: inherit;
+    border: 1px solid #609ee9;
+    color: #609ee9;
+}
+.my-btn.btn--secdonary:hover,
+.my-btn.btn--secdonary:active{
+    background-color: #609ee9;
+    color: white;
+}
+
+.my-btn.btn--lg{
+    font-size: 20px;
+    line-height: 56px;
+    height: 56px;
+    font-weight: 400;
+    border-radius: 28px;
+    padding: 0 64px;
+}
+.my-btn.btn--md{
+    font-size: 18px;
+    line-height: 48px;
+    height: 48px;
+    font-weight: 400;
+    border-radius: 24px;
+    padding: 0 64px;
+}
+.my-btn.btn--sm{
+    font-size: 14px;
+    line-height: 32px;
+    height: 32px;
+    font-weight: 400;
+    border-radius: 16px;
+    padding: 0 32px;
+}
+
+.btn-group{
+    display: block;
+}
+
+.btn-group .my-btn{
+    margin: 0 8px;
+}
+.btn-group--center{
+    text-align: center;
+}
+
+/* icon btn */
+.icon-btn{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+}
+
+.icon-btn .icon{
+    display: block;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.icon-btn .icon:hover{
+    transform: translateY(-20%);
+}
+
+.navbar__burger{
+    float: right;
+}
+
+/* text btn */
+.text-btn{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Raleway','Helvetica', 'roboto', arial, sans-serif;
+    letter-spacing: 0;
+    text-decoration: none;
+    color: #484848;
+}
+
+
+.text-btn.text-btn--lg{
+    font-size: 20px;
+    line-height: 48px;
+    height: 48px;
+    font-weight: 900;
+}
+
+.text-btn.text-btn--lg::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #609ee9;
+    transition: all 0.3s;
+}
+
+.text-btn.text-btn--lg:hover::before{
+    width: 100%;
+}
