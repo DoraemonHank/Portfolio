@@ -24,7 +24,7 @@ const FooterComponents = ({ t, setType }) => {
   return (
     <div>
         <footer className="cointer bg-dark">
-            <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-center flex-column flex-sm-row">
                 <ul>
                     <li className='text-center'>
                         <h4 className='text-light'>{t('About')}</h4>

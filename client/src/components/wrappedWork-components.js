@@ -158,11 +158,11 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
                                         </tr>
                                     </tbody>
                                 </table>
-                                <div className='d-flex justify-content-center'>
+                                <div className='d-flex btn-sm justify-content-center'>
                                     <button className="btn btn-outline-primary fs-sm"
                                     data-bs-toggle="modal" data-bs-target={'#staticBackdrop' + index.toString(2)}>{t('PreviewIntro')}</button>
-                                    <button className="btn btn-outline-primary ms-5 fs-sm" onClick={() => { onHandleDetail(data) } }>{t('DetailIntro')}</button>
-                                    <a target='_blank' href={data.demo} className="btn btn-outline-primary ms-5 fs-sm" rel="noreferrer">Demo</a>
+                                    <button className="btn btn-outline-primary ms-sm-5 fs-sm" onClick={() => { onHandleDetail(data) } }>{t('DetailIntro')}</button>
+                                    <a target='_blank' href={data.demo} className="btn btn-outline-primary ms-sm-5 fs-sm" rel="noreferrer">Demo</a>
                                 </div>
 
                                 {/*  Modal  */}

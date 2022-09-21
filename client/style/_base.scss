@@ -229,3 +229,10 @@ h1,h2,h3,h4,h5,h6{
     font-size: 15px;
   }
 }
+
+@media screen and (max-width:424px) {
+  .btn-sm{
+    flex-direction: column;
+    align-items: center;
+  }
+}
