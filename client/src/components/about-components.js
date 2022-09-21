@@ -18,12 +18,12 @@ const Aboutcomponents = ({ t }) => {
                     </div>
                     <div className="col">
                         <div className='text-light text-center text-md-start'>
-                            <p className='fs-5'>嗨!我是李柏漢</p>
-                            <p className='fs-5'>擁有8年軟體開發的經驗</p>
-                            <p className='fs-5'>現在任職於hTC VIVE，擔任資深軟體工程師</p>
-                            <p className='fs-5'>主要負責網頁前端和AI的相關軟體開發</p>
-                            <p className='fs-5'>目前已為公司爭取2項專利</p>
-                            <p className='fs-5'>同時也是Udemy C語言課程講師</p>
+                            <p className='fs-5'>{t('About1')}</p>
+                            <p className='fs-5'>{t('About2')}</p>
+                            <p className='fs-5'>{t('About3')}</p>
+                            <p className='fs-5'>{t('About4')}</p>
+                            <p className='fs-5'>{t('About5')}</p>
+                            <p className='fs-5'>{t('About6')}</p>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@ const Aboutcomponents = ({ t }) => {
 
         <div className="container">
         <h2 className="subtitle u-text-center">{t('Skill')}</h2>
-            <div className="row p-5">
+            <div className="row p-md-5">
                 <div className="col-md-6 mb-5">
                     <div className="card">
                         <div className="card-body">
@@ -41,9 +41,7 @@ const Aboutcomponents = ({ t }) => {
                                 <h5 className=" title-line card-title__style ">{t('Frontend')}</h5>
                             </div>
                             <p className="card-text">
-                                使用Figma畫出網頁架構，用HTML/CSS/Javascript/React/Next，實作工作上會用到的Web Tool以及其他自己的Side project。
-                                Web Tool 功能是用來幫Training Data做Label，使用React框架來做出網頁架構，並且和後端Web API串接。
-                                另外也實作自己的個人網頁，網頁除了學經歷外，也Demo和介紹Side project，一樣使用React框架來架構網頁，再透過Jest+Enzyme來做測試；Scss搭配bootstrap做外觀上的美化並且具有RWD的功能。後端使用Node.js/Express創建routes，Database使用MongoDB/Mongoose做資料管理。
+                                {t('SkillFE')}
                             </p>
                         </div>
                     </div>
@@ -55,10 +53,7 @@ const Aboutcomponents = ({ t }) => {
                                 <h5 className=" title-line card-title__style ">{t('AI')}</h5>
                             </div>
                             <p className="card-text">
-                                使用Caffe和Tensorflow，從創建模型、訓練分析到後處理，應用在車流追蹤，VR表情辨識，VR臉部重建，以及一些Side project。
-                                並且撰寫分析Model的Tool，針對Precision，Recall，F1-score，Loss value，Accuracy等指標做分析，看Model收斂的狀況，從checkpoint中挑選表現最好的Model，
-                                還有分析Training Data的品質，數量分布，類型等，針對Model的弱點從Data層面來做補強。
-                                最後使用影像處理和電腦視覺技巧對Predict結果做後處理。
+                                {t('SkillAI')}
                             </p>
                         </div>
                     </div>
@@ -70,8 +65,7 @@ const Aboutcomponents = ({ t }) => {
                                 <h5 className=" title-line card-title__style ">Unity3D</h5>
                             </div>
                             <p className="card-text">
-                                實作 VR Content，實作收集DL Training data的Tool和產生SLAM軌跡的虛擬Data。
-                                另外還實作了一些Side Project。
+                                {t('SkillGame')}
                             </p>
                         </div>
                     </div>
@@ -83,7 +77,7 @@ const Aboutcomponents = ({ t }) => {
                                 <h5 className=" title-line card-title__style ">SDK</h5>
                             </div>
                             <p className="card-text">
-                                VIVE VR頭盔專用的SDK，提供給VR的開發者使用，讓開發者可以使用眼球追蹤和唇形追蹤的API來應用。
+                                {t('SkillSdk')}
                             </p>
                         </div>
                     </div>
@@ -105,7 +99,7 @@ const Aboutcomponents = ({ t }) => {
         <br/>
 
         <div className="container mt-5">
-            <h2 className="subtitle u-text-center">程式語言</h2>
+            <h2 className="subtitle u-text-center">{t('Program')}</h2>
             <ReactEcharts
                 key={Date.now()}
                 theme="light"
@@ -118,7 +112,7 @@ const Aboutcomponents = ({ t }) => {
                     }
                   },
                   title: {
-                    text: '熟悉度',
+                    text: 'Familiarity',
                     textStyle: {
                       color: 'rgba(0, 0, 0, .85)',
                       fontSize: '12px'
@@ -150,55 +144,55 @@ const Aboutcomponents = ({ t }) => {
         <br/>
 
         <div className="container mt-5">
-            <h2 className="subtitle u-text-center">專案產品</h2>
-            <p className='text-center'>以下為負責之專案量產後的產品</p>
+            <h2 className="subtitle u-text-center">{t('Project')}</h2>
+            <p className='text-center'>{t('ProjectIntro')}</p>
             <div className="card mb-5">
                 <div className="card-header">
                     SRanipal SDK
                 </div>
                 <div className="card-body">
-                    <h5 className="card-title">專為VR遊戲開發者設計的SDK</h5>
+                    <h5 className="card-title">{t('ProjectSdkTitle')}</h5>
                     <p className="card-text">
-                        1. 眼球追蹤技術，眼球移動與眨眼皆能真實反映在您虛擬世界中的化身<br/>
-                        2. 唇形追蹤技術，更能體現虛擬世界中的自己的臉部表情變化
+                        1. {t('ProjectSdk1')}<br/>
+                        2. {t('ProjectSdk2')}
                         </p>
-                    <a target="_blank" href="https://developer-express.vive.com/resources/vive-sense/eye-and-facial-tracking-sdk/" className="btn btn-outline-secondary rounded-pill" rel="noreferrer">前往查看 &gt;</a>
+                    <a target="_blank" href="https://developer-express.vive.com/resources/vive-sense/eye-and-facial-tracking-sdk/" className="btn btn-outline-secondary rounded-pill" rel="noreferrer">{t('GoToView')} &gt;</a>
                 </div>
             </div>
             <div className="card mb-5">
                 <div className="card-header">
-                    眼球追蹤
+                    {t('ProjectEyeTrackingHeader')}
                 </div>
                 <div className="card-body">
                     <h5 className="card-title">VIVE Pro Eye</h5>
                     <p className="card-text">
-                        利用VIVE Pro Eye頭盔內建的相機之影像來訓練AI辨識眼睛的動作
+                        {t('ProjectEyeTracking')}
                         </p>
-                    <a target="_blank" href="https://www.vive.com/tw/product/vive-pro-eye/features/" className="btn btn-outline-secondary rounded-pill" rel="noreferrer">前往查看 &gt;</a>
+                    <a target="_blank" href="https://www.vive.com/tw/product/vive-pro-eye/features/" className="btn btn-outline-secondary rounded-pill" rel="noreferrer">{t('GoToView')} &gt;</a>
                 </div>
             </div>
             <div className="card mb-5">
                 <div className="card-header">
-                    唇形追蹤
+                {t('ProjectLipTrackingHeader')}
                 </div>
                 <div className="card-body">
-                    <h5 className="card-title">VIVE 表情偵測套件</h5>
+                    <h5 className="card-title">VIVE {t('ProjectLipTrackingTitle')}</h5>
                     <p className="card-text">
-                         使用此套件的影像訓練出來的AI模型能辨識38種表情動作
+                         {t('ProjectLipTracking')}
                         </p>
-                    <a target="_blank" href="https://www.vive.com/tw/accessory/facial-tracker/" className="btn btn-outline-secondary rounded-pill" rel="noreferrer">前往查看 &gt;</a>
+                    <a target="_blank" href="https://www.vive.com/tw/accessory/facial-tracker/" className="btn btn-outline-secondary rounded-pill" rel="noreferrer">{t('GoToView')} &gt;</a>
                 </div>
             </div>
             <div className="card mb-5">
                 <div className="card-header">
-                    Udemy課程講師
+                    Udemy {t('ProjectUdemyHeader')}
                 </div>
                 <div className="card-body">
-                    <h5 className="card-title">Udemy線上授課</h5>
+                    <h5 className="card-title">Udemy {t('ProjectUdemyTitle')}</h5>
                     <p className="card-text">
-                         目前上架了C語言的教學課程
+                         {t('UdemyInfo')}
                         </p>
-                    <a target="_blank" href="https://www.udemy.com/user/ke-ai-ma-nong/" className="btn btn-outline-secondary rounded-pill" rel="noreferrer">前往查看 &gt;</a>
+                    <a target="_blank" href="https://www.udemy.com/user/ke-ai-ma-nong/" className="btn btn-outline-secondary rounded-pill" rel="noreferrer">{t('GoToView')} &gt;</a>
                 </div>
             </div>
         </div>
@@ -223,8 +217,8 @@ const Aboutcomponents = ({ t }) => {
         </div>
 
         <div className="container mt-5">
-            <h2 className="subtitle u-text-center">資格認證</h2>
-            <p className="text-center">在職期間，利用下班時間，學習不間段</p>
+            <h2 className="subtitle u-text-center">{t('Certificate')}</h2>
+            <p className="text-center">{t('CertificateIntro')}</p>
             <div className="row">
                 <div className="col-12 col-lg-4 mb-5">
                     <div className="card">
@@ -239,12 +233,12 @@ const Aboutcomponents = ({ t }) => {
                                     <p className='ms-5 mt-4'>Coursera</p>
                                 </div>
                             </li>
-                            <li className="list-group-item">發照日期 : 2019/11</li>
-                            <li className="list-group-item">證照編號 : NP72CC9TBJPD</li>
+                            <li className="list-group-item">{t('Issued')} : 2019/11</li>
+                            <li className="list-group-item">{t('CredentialId')} : NP72CC9TBJPD</li>
                         </ul>
                         <div className="d-flex justify-content-center">
                             <a target="_blank" href="https://www.coursera.org/account/accomplishments/verify/NP72CC9TBJPD" className="btn btn-outline-secondary rounded-pill" rel="noreferrer">
-                                顯示證照
+                                {t('ShowCredential')}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke="currentColor" fill="currentColor" className=" bi bi-arrow-up-right-square" viewBox="0 0 16 16">
                                     <path fillRule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"/>
                                 </svg>
@@ -266,12 +260,12 @@ const Aboutcomponents = ({ t }) => {
                                     <p className='ms-5 mt-4'>Coursera</p>
                                 </div>
                             </li>
-                            <li className="list-group-item">發照日期 : 2019/11</li>
-                            <li className="list-group-item">證照編號 : S2QT9ETF76C3</li>
+                            <li className="list-group-item">{t('Issued')} : 2019/11</li>
+                            <li className="list-group-item">{t('CredentialId')} : S2QT9ETF76C3</li>
                         </ul>
                         <div className="d-flex justify-content-center">
                             <a target="_blank" href="https://www.coursera.org/account/accomplishments/verify/S2QT9ETF76C3" className="btn btn-outline-secondary rounded-pill" rel="noreferrer">
-                                顯示證照
+                                {t('ShowCredential')}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke="currentColor" fill="currentColor" className=" bi bi-arrow-up-right-square" viewBox="0 0 16 16">
                                     <path fillRule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"/>
                                 </svg>
@@ -293,12 +287,12 @@ const Aboutcomponents = ({ t }) => {
                                     <p className='ms-5 mt-4'>Udemy</p>
                                 </div>
                             </li>
-                            <li className="list-group-item">發照日期 : 2019/12</li>
-                            <li className="list-group-item">證照編號 : UC-JBV844GH</li>
+                            <li className="list-group-item">{t('Issued')} : 2019/12</li>
+                            <li className="list-group-item">{t('CredentialId')} : UC-JBV844GH</li>
                         </ul>
                         <div className="d-flex justify-content-center">
                             <a target="_blank" href="https://www.udemy.com/certificate/UC-JBV844GH/" className="btn btn-outline-secondary rounded-pill" rel="noreferrer">
-                                顯示證照
+                                {t('ShowCredential')}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke="currentColor" fill="currentColor" className=" bi bi-arrow-up-right-square" viewBox="0 0 16 16">
                                     <path fillRule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"/>
                                 </svg>
@@ -320,12 +314,12 @@ const Aboutcomponents = ({ t }) => {
                                     <p className='ms-5 mt-4'>艾鍗學院</p>
                                 </div>
                             </li>
-                            <li className="list-group-item">發照日期 : 2019/7</li>
-                            <li className="list-group-item">證書編號 : ETD1080623218</li>
+                            <li className="list-group-item">{t('Issued')} : 2019/7</li>
+                            <li className="list-group-item">{t('CredentialId')} : ETD1080623218</li>
                         </ul>
                         <div className="d-flex justify-content-center">
                             <a target="_blank" href="https://drive.google.com/file/d/0B82xIefl-hKNdFhKRmdUbjRzMDc2R3FVSkJtTmxWSjNmNmpr/view?resourcekey=0-1mtokUCdcZR4LZiv2mdDyA" className="btn btn-outline-secondary rounded-pill" rel="noreferrer">
-                                顯示證照
+                                {t('ShowCredential')}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke="currentColor" fill="currentColor" className=" bi bi-arrow-up-right-square" viewBox="0 0 16 16">
                                     <path fillRule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.854 8.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707l-4.096 4.096z"/>
                                 </svg>
@@ -338,32 +332,32 @@ const Aboutcomponents = ({ t }) => {
 
         <br/>
         <div className="container mt-5">
-            <h2 className="subtitle u-text-center">經歷</h2>
+            <h2 className="subtitle u-text-center">{t('Experience')}</h2>
             <div className="timeline-group">
                 <div className="timeline"></div>
                 <div className="timeline-cards">
                     <div className="timeline-cards__content">
-                        <h3 className="timeline-card__time">2019/3~仍在職</h3>
+                        <h3 className="timeline-card__time">2019/3~{t('Present')}</h3>
                         <div className="timeline-card">
-                            <h4 className="d-md-none">2019/3~</h4>
-                            <h1 className='timeline-card__title'>宏達電</h1>
-                            <p className="timeline-card__text">負責過的專案包跨用C++開發SDK，用Python來處理訓練用的資料，再搭配Tensorflow辨識臉部表情，然後C#搭配Unity實作VR遊戲和產生虛擬資料以及用React製作網頁AI輔助工具</p>
+                            <h4 className="d-md-none">2019/3~{t('Present')}</h4>
+                            <h1 className='timeline-card__title'>{t('hTC')}</h1>
+                            <p className="timeline-card__text">{t('hTCWork')}</p>
                         </div>
                     </div>
                     <div className="timeline-cards__content">
                         <h3 className="timeline-card__time">2018/9~2019/3</h3>
                         <div className="timeline-card">
                             <h4 className="d-md-none">2018/9~2019/3</h4>
-                            <h1 className='timeline-card__title'>大眾電腦股份有限公司</h1>
-                            <p className="timeline-card__text">參與桃園市政府的科技執法專案，使用Python搭配Caffe訓練YOLO模型做車流偵測，並且用C++搭配OpenCV實作電腦視覺的算法來後處理，最後用Qt製作UI介面供客戶操作</p>
+                            <h1 className='timeline-card__title'>{t('FIC')}</h1>
+                            <p className="timeline-card__text">{t('FICWork')}</p>
                         </div>
                     </div>
                     <div className="timeline-cards__content">
                         <h3 className="timeline-card__time">2014/11~2018/3</h3>
                         <div className="timeline-card">
                             <h4 className="d-md-none">2014/11~2018/3</h4>
-                            <h1 className='timeline-card__title'>艾訊股份有限公司 </h1>
-                            <p className="timeline-card__text">工業電腦的韌體開發，主要是UEFI BIOS和EC，使用的是C語言</p>
+                            <h1 className='timeline-card__title'>{t('Axiomtek')} </h1>
+                            <p className="timeline-card__text">{t('AxiomtekWork')}</p>
                         </div>
                     </div>
                 </div>
@@ -373,27 +367,27 @@ const Aboutcomponents = ({ t }) => {
         <br/>
         <br/>
         <div className="container mt-5">
-                <h2 className="subtitle u-text-center">學歷</h2>
+                <h2 className="subtitle u-text-center">{t('Education')}</h2>
                 <div className="timeline-group">
                     <div className="timeline"></div>
                     <div className="timeline-cards">
                         <div className="timeline-cards__row">
                             <div className="timeline-card ">
-                                <h1 className='timeline-card__long-title' >雲林科技大學</h1>
+                                <h1 className='timeline-card__long-title' >{t('NYUST')}</h1>
                                 <div className="d-flex justify-content-md-end">
-                                    <p className="timeline-card__text">電機系</p>
+                                    <p className="timeline-card__text">{t('EE')}</p>
                                     <div className='ms-1 me-1' style={{ width: '1.5px', backgroundColor: 'gray' }}></div>
-                                    <p className="timeline-card__text">碩士畢業</p>
+                                    <p className="timeline-card__text">{t('Master')}</p>
                                 </div>
                             </div>
                         </div>
                         <div className="timeline-cards__row">
                             <div className="timeline-card">
-                                <h1 className='timeline-card__title'>虎尾科技大學</h1>
+                                <h1 className='timeline-card__title'>{t('NFU')}</h1>
                                 <div className="d-flex">
-                                    <p className="timeline-card__text">飛機系</p>
+                                    <p className="timeline-card__text">{t('AE')}</p>
                                     <div className='ms-1 me-1' style={{ width: '1.6px', backgroundColor: 'gray' }}></div>
-                                    <p className="timeline-card__text">學士畢業</p>
+                                    <p className="timeline-card__text">{t('Bachelor')}</p>
                                 </div>
                             </div>
                         </div>

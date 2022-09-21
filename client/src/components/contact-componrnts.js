@@ -95,32 +95,32 @@ const ContactComponrnts = ({ t }) => {
                     <form className="form">
                         {
                             isHaveData === false &&
-                            <p className='text-danger'>請填滿所有欄位</p>
+                            <p className='text-danger'>{t('TextError')}</p>
                         }
-                        <label className="text-dark" htmlFor="">姓名:</label>
+                        <label className="text-dark" htmlFor="">{t('Name')}:</label>
                         <input value={name} onChange={(e) => { setName(e.target.value) }} style={!isHaveData && name === '' ? { border: '1px solid red' } : { }} type="text"/>
                         <div className="row">
                             <div className="col-sm-6">
-                                <label className="text-dark" htmlFor="">電話:</label>
+                                <label className="text-dark" htmlFor="">{t('電話')}:</label>
                                 <input value={tel} onChange={(e) => { setTel(e.target.value) }} style={((!isHaveData && tel === '') || !isTelVail) ? { border: '1px solid red' } : { }} type="tel"/>
                                 {
                                     !isTelVail &&
-                                    <p className='text-danger fs-6'>電話號碼格式錯誤</p>
+                                    <p className='text-danger fs-6'>{t('PhoneError')}</p>
                                 }
                             </div>
                             <div className="col-sm-6">
-                                <label className="text-dark" htmlFor="">信箱:</label>
+                                <label className="text-dark" htmlFor="">{t('Email')}:</label>
                                 <input value={email} onChange={(e) => { setEmail(e.target.value) }} style={((!isHaveData && email === '') || !isEmailVail) ? { border: '1px solid red' } : { }} type="text"/>
                                 {
                                     !isEmailVail &&
-                                    <p className='text-danger fs-6'>E-Mail格式錯誤</p>
+                                    <p className='text-danger fs-6'>{t('EmailError')}</p>
                                 }
                             </div>
                         </div>
-                        <label className="text-dark" htmlFor="">訊息:</label>
+                        <label className="text-dark" htmlFor="">{t('Message')}:</label>
                         <textarea value={msg} onChange={(e) => { setMsg(e.target.value) }} name="" id="" cols="30" rows="10" style={!isHaveData && msg === '' ? { border: '1px solid red' } : { }}></textarea>
                         <div className="btn-group btn-group--center form__btn-group">
-                            <button onClick={onHandleSubmit} type="submit" className="my-btn btn--primary btn--md">提交</button>
+                            <button onClick={onHandleSubmit} type="submit" className="my-btn btn--primary btn--md">{t('Submit')}</button>
                             <SweetAlert2 {...swalProps}
                             didClose={() => {
                               // run when swal is closed...

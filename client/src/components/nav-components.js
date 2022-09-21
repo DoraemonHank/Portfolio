@@ -51,7 +51,15 @@ const NavComponent = (props) => {
             }} className="my_nav">
                 <div className="my_container">
                     <div className="my_logo">
-                        <Link className="fs-4" to="#">Your Logo</Link>
+                        <a href="https://github.com/DoraemonHank?tab=repositories" className="icon-btn fs-4" data-wow-delay="0.3s">
+                            <i className="icon icon-github-circled"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/po-han-li-4358a1a2/" className="icon-btn fs-4" data-wow-delay="0.6s">
+                            <i className="icon icon-linkedin"></i>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=pMGbPJ9ojcA" className="icon-btn fs-4" data-wow-delay="0.9s">
+                            <i className="icon icon-youtube"></i>
+                        </a>
                         <select onChange={onHandleSelect} data-testid="test-select"
                         className=" ms-3"
                         aria-label="Default select example">

@@ -130,11 +130,11 @@ const HomeComponents = ({ t, setType }) => {
                                 <i className="icon-quote-right"></i>
                             </div>
                             <p className="quote__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quia voluptas atque illo et vel cum? Mollitia quo quos iusto!
+                                C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do, it blows away your whole leg.
                             </p>
                             <div className="quote__name">
-                                <span>Somebody</span>
-                                    - from  somewhere
+                                <span>Bjarne Stroustrup</span>
+                                    - from  C++ Developer
                             </div>
                         </div>
                     </div>
@@ -153,7 +153,7 @@ const HomeComponents = ({ t, setType }) => {
                             <div className="skill-card position-relative">
                                 <div className="skill-card__inner">
                                       <h4 className="skill-card__title">{t('Web')}</h4>
-                                      <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p>
+                                      {/* <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p> */}
                                 </div>
                                 <div className="skill-card__icon">
                                     <img src="https://i.imgur.com/XgdEeuu.png" alt="html" title="html"/>
@@ -164,7 +164,7 @@ const HomeComponents = ({ t, setType }) => {
                             <div className="skill-card position-relative" data-wow-delay="0.5s">
                                 <div className="skill-card__inner">
                                       <h4 className="skill-card__title">{t('AI')}</h4>
-                                      <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p>
+                                      {/* <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p> */}
                                 </div>
                                 <div className="skill-card__icon">
                                     <img src="https://i.imgur.com/t8s6d1R.png" alt="html" title="html"/>
@@ -177,7 +177,7 @@ const HomeComponents = ({ t, setType }) => {
                             <div className="skill-card position-relative" data-wow-delay="1s">
                                 <div className="skill-card__inner">
                                       <h4 className="skill-card__title">{t('Game')}</h4>
-                                      <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p>
+                                      {/* <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p> */}
                                 </div>
                                 <div className="skill-card__icon">
                                     <img src="https://i.imgur.com/NkddNlL.jpg" alt="html" title="html"/>
@@ -187,8 +187,8 @@ const HomeComponents = ({ t, setType }) => {
                         <div className="col-sm-6">
                             <div className="skill-card position-relative" data-wow-delay="1s">
                                 <div className="skill-card__inner">
-                                      <h4 className="skill-card__title">SDK 開發</h4>
-                                      <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p>
+                                      <h4 className="skill-card__title">SDK {t('Develop')}</h4>
+                                      {/* <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p> */}
                                 </div>
                                 <div className="skill-card__icon">
                                     <img src="https://i.imgur.com/fQqH81k.png" alt="html" title="html"/>
@@ -209,26 +209,14 @@ const HomeComponents = ({ t, setType }) => {
                     <div className="timeline-cards">
                         <div className="timeline-cards__row">
                             <div className="timeline-card ">
-                                <h1 className='timeline-card__title'>Title</h1>
-                                <p className="timeline-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas commodi ratione in vitae nostrum aperiam error consectetur quia vero quo!</p>
+                                <h1 className='timeline-card__title'>{t('Patent')}</h1>
+                                <p className="timeline-card__text">{t('PatentInfo')}</p>
                             </div>
                         </div>
                         <div className="timeline-cards__row">
                             <div className="timeline-card">
-                                <h1 className='timeline-card__title'>Title</h1>
-                                <p className="timeline-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas commodi ratione in vitae nostrum aperiam error consectetur quia vero quo!</p>
-                            </div>
-                        </div>
-                        <div className="timeline-cards__row">
-                            <div className="timeline-card ">
-                                <h1 className='timeline-card__title'>Title</h1>
-                                <p className="timeline-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas commodi ratione in vitae nostrum aperiam error consectetur quia vero quo!</p>
-                            </div>
-                        </div>
-                        <div className="timeline-cards__row">
-                            <div className="timeline-card ">
-                                <h1 className='timeline-card__title'>Title</h1>
-                                <p className="timeline-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas commodi ratione in vitae nostrum aperiam error consectetur quia vero quo!</p>
+                                <h1 className='timeline-card__title'>Udemy {t('UdemyTitle')}</h1>
+                                <p className="timeline-card__text">{t('UdemyInfo')}</p>
                             </div>
                         </div>
                     </div>

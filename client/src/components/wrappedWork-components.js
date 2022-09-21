@@ -27,45 +27,45 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
                             postData[0].category === 'web' &&
                             <table className="table">
                                 <tr>
-                                    <td className="pb-3">程式語言</td>
+                                    <td className="pb-3">{t('Program')}</td>
                                     <td className="pb-3">
                                         HTML、CSS、JavaScript
                                     </td>
                                 </tr>
                                 <tr >
-                                    <td className="pb-3 pt-3">使用框架</td>
+                                    <td className="pb-3 pt-3">{t('Framework')}</td>
                                     <td className="pb-3 pt-3">React、Next.js、Node.js、Express</td>
                                 </tr>
                                 <tr >
-                                    <td className="pb-3 pt-3">CSS處理</td>
+                                    <td className="pb-3 pt-3">CSS</td>
                                     <td className="pb-3 pt-3">SCSS、Bootstrap5</td>
                                 </tr>
                                 <tr >
-                                    <td className="pb-3 pt-3">套件</td>
+                                    <td className="pb-3 pt-3">{t('Package')}</td>
                                     <td className="pb-3 pt-3">i18next、Draft.js、ECharts</td>
                                 </tr>
                                 <tr >
-                                    <td className="pb-3 pt-3">單元測試</td>
+                                    <td className="pb-3 pt-3">{t('UnitTest')}</td>
                                     <td className="pb-3 pt-3">Jest、Enzyme</td>
                                 </tr>
                                 <tr >
-                                    <td className="pb-3 pt-3">檢查工具</td>
+                                    <td className="pb-3 pt-3">{t('CheckTool')}</td>
                                     <td className="pb-3 pt-3">ESLint</td>
                                 </tr>
                                 <tr >
-                                    <td className="pb-3 pt-3">打包工具</td>
+                                    <td className="pb-3 pt-3">{t('Bundler')}</td>
                                     <td className="pb-3 pt-3">Webpack</td>
                                 </tr>
                                 <tr>
-                                    <td className="pb-3 pt-3">資料庫</td>
+                                    <td className="pb-3 pt-3">{t('DB')}</td>
                                     <td className="pb-3 pt-3">MongoDB(Mongoose)、Firebase</td>
                                 </tr>
                                 <tr>
-                                    <td className="pb-3 pt-3">伺服器</td>
+                                    <td className="pb-3 pt-3">{t('Server')}</td>
                                     <td className="pb-3 pt-3">GCP、Heroku</td>
                                 </tr>
                                 <tr>
-                                    <td className="pb-3 pt-3">版本管理</td>
+                                    <td className="pb-3 pt-3">{t('VersionControl')}</td>
                                     <td className="pb-3 pt-3">Github、GibLab、Gerrit</td>
                                 </tr>
                             </table>
@@ -75,21 +75,21 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
                             postData[0].category === 'dl' &&
                             <table className="table">
                                 <tr>
-                                    <td className="pb-3">程式語言</td>
+                                    <td className="pb-3">{t('Program')}</td>
                                     <td className="pb-3">
                                         Python
                                     </td>
                                 </tr>
                                 <tr >
-                                    <td className="pb-3 pt-3">使用框架</td>
+                                    <td className="pb-3 pt-3">{t('Framework')}</td>
                                     <td className="pb-3 pt-3">Tensorflow、Keras、Caffe</td>
                                 </tr>
                                 <tr >
-                                    <td className="pb-3 pt-3">套件</td>
+                                    <td className="pb-3 pt-3">{t('Package')}</td>
                                     <td className="pb-3 pt-3">numpy、matplot、pandas</td>
                                 </tr>
                                 <tr>
-                                    <td className="pb-3 pt-3">版本管理</td>
+                                    <td className="pb-3 pt-3">{t('VersionControl')}</td>
                                     <td className="pb-3 pt-3">Github、GibLab、Gerrit</td>
                                 </tr>
                             </table>
@@ -99,21 +99,21 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
                             postData[0].category === 'game' &&
                             <table className="table">
                                 <tr>
-                                    <td className="pb-3">程式語言</td>
+                                    <td className="pb-3">{t('Program')}</td>
                                     <td className="pb-3">
                                         C#
                                     </td>
                                 </tr>
                                 <tr >
-                                    <td className="pb-3 pt-3">遊戲引擎</td>
+                                    <td className="pb-3 pt-3">{t('GameEngine')}</td>
                                     <td className="pb-3 pt-3">Unity</td>
                                 </tr>
                                 <tr >
-                                    <td className="pb-3 pt-3">套件</td>
+                                    <td className="pb-3 pt-3">{t('Package')}</td>
                                     <td className="pb-3 pt-3">SRanipal SDK</td>
                                 </tr>
                                 <tr>
-                                    <td className="pb-3 pt-3">版本管理</td>
+                                    <td className="pb-3 pt-3">{t('VersionControl')}</td>
                                     <td className="pb-3 pt-3">Github、GibLab、Gerrit</td>
                                 </tr>
                             </table>
@@ -160,7 +160,7 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
                                 </table>
                                 <div className='d-flex justify-content-center'>
                                     <button className="btn btn-outline-primary fs-sm"
-                                    data-bs-toggle="modal" data-bs-target={'#staticBackdrop' + index.toString(2)}>預覽介紹</button>
+                                    data-bs-toggle="modal" data-bs-target={'#staticBackdrop' + index.toString(2)}>{t('PreviewIntro')}</button>
                                     <button className="btn btn-outline-primary ms-5 fs-sm" onClick={() => { onHandleDetail(data) } }>{t('DetailIntro')}</button>
                                     <a target='_blank' href={data.demo} className="btn btn-outline-primary ms-5 fs-sm" rel="noreferrer">Demo</a>
                                 </div>

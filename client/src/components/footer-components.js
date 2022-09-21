@@ -66,7 +66,7 @@ const FooterComponents = ({ t, setType }) => {
             </div>
             <section className="footer-social-section flex-rw">
                 <span className="footer-social-overlap footer-social-connect fs-1">
-                CONNECT <span className="footer-social-small">with</span> US
+                CONNECT <span className="footer-social-small">with</span> ME
                 </span>
                 <span className="footer-social-overlap d-flex">
                     <a target='_blank' href="https://github.com/DoraemonHank?tab=repositories" className="generic-anchor" rel="noreferrer">
