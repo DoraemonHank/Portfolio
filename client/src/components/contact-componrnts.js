@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import ContactService from '../services/contact.service'
 import SweetAlert2 from 'react-sweetalert2'
+import { WOW } from 'wowjs'
+import '../../style/animate.scss'
 
 const ContactComponrnts = ({ t }) => {
   useEffect(() => {
@@ -58,6 +60,14 @@ const ContactComponrnts = ({ t }) => {
       })
       setIsSuccess(false)
     }
+    const wow = new WOW({
+      boxClass: 'wow',
+      animateClass: 'animated',
+      offset: -200,
+      mobile: true,
+      live: false
+    })
+    wow.init()
   }, [isHaveData, isTelVail, isEmailVail, isSubmit, isSuccess])
 
   const onHandleSubmit = (e) => {
@@ -91,8 +101,8 @@ const ContactComponrnts = ({ t }) => {
         <section className="portfolio"></section>
         <div className="contact">
                <div className="container">
-                    <h2 className="subtitle u-text-center">{t('Contact')}</h2>
-                    <form className="form">
+                    <h2 className="subtitle u-text-center wow bounceInUp">{t('Contact')}</h2>
+                    <form className="form wow fadeInUp">
                         {
                             isHaveData === false &&
                             <p className='text-danger'>{t('TextError')}</p>
@@ -131,21 +141,24 @@ const ContactComponrnts = ({ t }) => {
                     </form>
 
                     <div className="divide-text text-dark">or</div>
-                    <div className="info ">
+                    <div className="info wow fadeInUp">
                         <div className="info__email">
                             <a href="mailTo:tsj10226@gmail.com">tsj10226@gmail.com</a>
                         </div>
-                        <div className="info__phone ">
-                            <a className="text-dark" href="tel:0972216868">0972216868</a>
+                        <div className="info__phone wow fadeInUp">
+                            <a className="text-dark" target='_blank' href="http://line.me/ti/p/Ncup0cRzqG" rel="noreferrer" >
+                              <p>LINE</p>
+                              <img src='https://i.imgur.com/Na02g1Z.png'></img>
+                            </a>
                         </div>
                         <section className="social-bar info__social-bar">
-                            <a href="#" className="icon-btn " data-wow-delay="0.3s">
+                            <a href="#" className="icon-btn wow bounceIn" data-wow-delay="0.3s">
                                 <i className="icon icon-github-circled"></i>
                             </a>
-                            <a href="#" className="icon-btn " data-wow-delay="0.6s">
+                            <a href="#" className="icon-btn wow bounceIn" data-wow-delay="0.6s">
                                 <i className="icon icon-linkedin"></i>
                             </a>
-                            <a href="#" className="icon-btn " data-wow-delay="0.9s">
+                            <a href="#" className="icon-btn wow bounceIn" data-wow-delay="0.9s">
                                 <i className="icon icon-youtube"></i>
                             </a>
                         </section>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router'
+import { WOW } from 'wowjs'
 import '../../style/opening_animation.scss'
 import '../../style/index.scss'
+import '../../style/animate.scss'
 
 const HomeComponents = ({ t, setType }) => {
   const lastWord = useRef()
@@ -21,6 +23,15 @@ const HomeComponents = ({ t, setType }) => {
           }
         )
       })
+
+      const wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: -200,
+        mobile: true,
+        live: false
+      })
+      wow.init()
     }
 
     return () => {
@@ -109,7 +120,7 @@ const HomeComponents = ({ t, setType }) => {
         <div className="hero">
             <div className="container">
               <div className='row'>
-                <div className="col-10 offset-md-1">
+                <div className="col-10 offset-md-1 wow bounceInLeft">
                   <h1 className="hero__heading">HELLO <br/>I&apos;M HANK</h1>
                 </div>
                 <div className="col">
@@ -146,11 +157,11 @@ const HomeComponents = ({ t, setType }) => {
          {/* Start skill */}
          <div className="skill bg-color-white  lean-bg--bottom">
             <div className="container">
-                <h2 className="subtitle u-text-center ">{t('Skill')}</h2>
+                <h2 className="subtitle u-text-center wow bounceInUp">{t('Skill')}</h2>
                 <div className="skill-group">
                     <div className="row">
                         <div className="col-sm-6">
-                            <div className="skill-card position-relative">
+                            <div className="skill-card position-relative wow bounceInUp">
                                 <div className="skill-card__inner">
                                       <a href='#Workweb'>
                                         <h4 className="skill-card__title">{t('Web')}</h4>
@@ -163,7 +174,7 @@ const HomeComponents = ({ t, setType }) => {
                             </div>
                         </div>
                         <div className="col-sm-6">
-                            <div className="skill-card position-relative" data-wow-delay="0.5s">
+                            <div className="skill-card position-relative wow bounceInUp" data-wow-delay="0.5s">
                                 <div className="skill-card__inner">
                                       <a href='#WorkAI'>
                                         <h4 className="skill-card__title">{t('AI')}</h4>
@@ -178,7 +189,7 @@ const HomeComponents = ({ t, setType }) => {
                     </div>
                     <div className="row">
                         <div className="col-sm-6">
-                            <div className="skill-card position-relative" data-wow-delay="1s">
+                            <div className="skill-card position-relative wow bounceInUp" data-wow-delay="1s">
                                 <div className="skill-card__inner">
                                     <a href='#WorkGame'>
                                         <h4 className="skill-card__title">{t('Game')}</h4>
@@ -191,7 +202,7 @@ const HomeComponents = ({ t, setType }) => {
                             </div>
                         </div>
                         <div className="col-sm-6">
-                            <div className="skill-card position-relative" data-wow-delay="1s">
+                            <div className="skill-card position-relative wow bounceInUp" data-wow-delay="1s">
                                 <div className="skill-card__inner">
                                     <a target='_blank' href='https://developer-express.vive.com/resources/vive-sense/eye-and-facial-tracking-sdk/' rel="noreferrer">
                                         <h4 className="skill-card__title">SDK {t('Develop')}</h4>
@@ -212,17 +223,17 @@ const HomeComponents = ({ t, setType }) => {
          {/* Start achievements */}
         <div className="achievements">
             <div className="container">
-                <h2 className="subtitle u-text-center color-white ">{t('Achievements')}</h2>
+                <h2 className="subtitle u-text-center color-white wow bounceInUp">{t('Achievements')}</h2>
                 <div className="timeline-group">
-                    <div className="timeline-cards">
+                    <div className="timeline-cards wow bounceInUp">
                         <div className="timeline-cards__row">
-                            <div className="timeline-card ">
+                            <div className="timeline-card wow bounceInUp">
                                 <h1 className='timeline-card__title'>{t('Patent')}</h1>
                                 <p className="timeline-card__text">{t('PatentInfo')}</p>
                             </div>
                         </div>
                         <div className="timeline-cards__row">
-                            <div className="timeline-card">
+                            <div className="timeline-card wow bounceInUp">
                                 <h1 className='timeline-card__title'>Udemy {t('UdemyTitle')}</h1>
                                 <p className="timeline-card__text">{t('UdemyInfo')}</p>
                             </div>
@@ -236,9 +247,9 @@ const HomeComponents = ({ t, setType }) => {
         {/* Start work */}
         <div className="work bg-color-white lean-bg--top lean-bg--bottom">
             <div className="container">
-                <h2 className="subtitle u-text-center">{t('WorkList')}</h2>
+                <h2 className="subtitle u-text-center wow bounceInUp">{t('WorkList')}</h2>
                 <div className="work-list">
-                    <div className="work-item" id='Workweb'>
+                    <div className="work-item wow fadeInUp" id='Workweb'>
                         <div className="row">
                             <div className=" col-sm-8 col-lg-4  order-sm-2">
                                 <div className="imgbox">
@@ -257,7 +268,7 @@ const HomeComponents = ({ t, setType }) => {
                         </div>
                     </div>
 
-                    <div className="work-item" id='WorkAI'>
+                    <div className="work-item wow fadeInUp" id='WorkAI'>
                         <div className="row">
                             <div className=" col-sm-8 col-lg-4  offset-lg-1 order-sm-1">
                                 <div className="imgbox">
@@ -276,7 +287,7 @@ const HomeComponents = ({ t, setType }) => {
                         </div>
                     </div>
 
-                    <div className="work-item" id='WorkGame'>
+                    <div className="work-item wow fadeInUp" id='WorkGame'>
                         <div className="row">
                             <div className="col-sm-8 col-lg-4  order-sm-2">
                                 <div className="imgbox">

@@ -60,7 +60,7 @@ const FooterComponents = ({ t, setType }) => {
                         <a className="generic-anchor" href="mailTo:tsj10226@gmail.com">tsj10226@gmail.com</a>
                     </li>
                     <li className='text-center'>
-                        <a className="generic-anchor" href="tel:0972216868">0972216868</a>
+                        <a className="generic-anchor" target='_blank' href="http://line.me/ti/p/Ncup0cRzqG" rel="noreferrer">LINE ID : tsj10228</a>
                     </li>
                 </ul>
             </div>
