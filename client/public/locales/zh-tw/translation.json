@@ -32,7 +32,7 @@
     "SkillFE":"使用Figma畫出網頁架構，用HTML/CSS/Javascript/React/Next，實作工作上會用到的Web Tool以及其他自己的Side project。Web Tool 功能是用來幫Training Data做Label，使用React框架來做出網頁架構，並且和後端Web API串接。另外也實作自己的個人網頁，網頁除了學經歷外，也Demo和介紹Side project，一樣使用React框架來架構網頁，再透過Jest+Enzyme來做測試；Scss搭配bootstrap做外觀上的美化並且具有RWD的功能。後端使用Node.js/Express創建routes，Database使用MongoDB/Mongoose做資料管理。",
     "SkillAI":"使用Caffe和Tensorflow，從創建模型、訓練分析到後處理，應用在車流追蹤，VR表情辨識，VR臉部重建，以及一些Side project。 並且撰寫分析Model的Tool，針對Precision，Recall，F1-score，Loss value，Accuracy等指標做分析。觀察Model收斂的狀況，從checkpoint中挑選表現最好的Model。還有分析Training Data的品質，數量分布，類型等，針對Model的弱點從Data層面來做補強。最後使用影像處理和電腦視覺技巧對Predict結果做後處理。",
     "SkillGame":"實作 VR Content。實作收集DL Training data的Tool和產生運動軌跡的虛擬Data給SLAM。 另外還實作了一些Side Project。",
-    "SkillSdk":"VIVE VR頭盔專用的SDK，提供給VR的開發者使用，讓開發者可以使用眼球追蹤和唇形追蹤的API來應用。",
+    "SkillSdk":"使用C++開發的VIVE VR頭盔專用的SDK，提供給VR的開發者使用，讓開發者可以使用眼球追蹤和唇形追蹤的API來應用。",
     "Program":"程式語言",
     "Project":"專案產品",
     "ProjectIntro":"以下為負責之專案量產後的產品",

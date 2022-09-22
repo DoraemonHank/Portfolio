@@ -107,11 +107,11 @@ const ContactComponrnts = ({ t }) => {
                             isHaveData === false &&
                             <p className='text-danger'>{t('TextError')}</p>
                         }
-                        <label className="text-dark" htmlFor="">{t('Name')}:</label>
+                        <label className="text-dark" htmlFor=""><span style={{ color: 'red' }}>*</span>{t('Name')}:</label>
                         <input value={name} onChange={(e) => { setName(e.target.value) }} style={!isHaveData && name === '' ? { border: '1px solid red' } : { }} type="text"/>
                         <div className="row">
                             <div className="col-sm-6">
-                                <label className="text-dark" htmlFor="">{t('電話')}:</label>
+                                <label className="text-dark" htmlFor=""><span style={{ color: 'red' }}>*</span>{t('電話')}:</label>
                                 <input value={tel} onChange={(e) => { setTel(e.target.value) }} style={((!isHaveData && tel === '') || !isTelVail) ? { border: '1px solid red' } : { }} type="tel"/>
                                 {
                                     !isTelVail &&
@@ -119,7 +119,7 @@ const ContactComponrnts = ({ t }) => {
                                 }
                             </div>
                             <div className="col-sm-6">
-                                <label className="text-dark" htmlFor="">{t('Email')}:</label>
+                                <label className="text-dark" htmlFor=""><span style={{ color: 'red' }}>*</span>{t('Email')}:</label>
                                 <input value={email} onChange={(e) => { setEmail(e.target.value) }} style={((!isHaveData && email === '') || !isEmailVail) ? { border: '1px solid red' } : { }} type="text"/>
                                 {
                                     !isEmailVail &&
@@ -127,7 +127,7 @@ const ContactComponrnts = ({ t }) => {
                                 }
                             </div>
                         </div>
-                        <label className="text-dark" htmlFor="">{t('Message')}:</label>
+                        <label className="text-dark" htmlFor=""><span style={{ color: 'red' }}>*</span>{t('Message')}:</label>
                         <textarea value={msg} onChange={(e) => { setMsg(e.target.value) }} name="" id="" cols="30" rows="10" style={!isHaveData && msg === '' ? { border: '1px solid red' } : { }}></textarea>
                         <div className="btn-group btn-group--center form__btn-group">
                             <button onClick={onHandleSubmit} type="submit" className="my-btn btn--primary btn--md">{t('Submit')}</button>
