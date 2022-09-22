@@ -152,7 +152,9 @@ const HomeComponents = ({ t, setType }) => {
                         <div className="col-sm-6">
                             <div className="skill-card position-relative">
                                 <div className="skill-card__inner">
-                                      <h4 className="skill-card__title">{t('Web')}</h4>
+                                      <a href='#Workweb'>
+                                        <h4 className="skill-card__title">{t('Web')}</h4>
+                                      </a>
                                       {/* <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p> */}
                                 </div>
                                 <div className="skill-card__icon">
@@ -163,7 +165,9 @@ const HomeComponents = ({ t, setType }) => {
                         <div className="col-sm-6">
                             <div className="skill-card position-relative" data-wow-delay="0.5s">
                                 <div className="skill-card__inner">
-                                      <h4 className="skill-card__title">{t('AI')}</h4>
+                                      <a href='#WorkAI'>
+                                        <h4 className="skill-card__title">{t('AI')}</h4>
+                                      </a>
                                       {/* <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p> */}
                                 </div>
                                 <div className="skill-card__icon">
@@ -176,7 +180,9 @@ const HomeComponents = ({ t, setType }) => {
                         <div className="col-sm-6">
                             <div className="skill-card position-relative" data-wow-delay="1s">
                                 <div className="skill-card__inner">
-                                      <h4 className="skill-card__title">{t('Game')}</h4>
+                                    <a href='#WorkGame'>
+                                        <h4 className="skill-card__title">{t('Game')}</h4>
+                                    </a>
                                       {/* <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p> */}
                                 </div>
                                 <div className="skill-card__icon">
@@ -187,8 +193,10 @@ const HomeComponents = ({ t, setType }) => {
                         <div className="col-sm-6">
                             <div className="skill-card position-relative" data-wow-delay="1s">
                                 <div className="skill-card__inner">
-                                      <h4 className="skill-card__title">SDK {t('Develop')}</h4>
-                                      {/* <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p> */}
+                                    <a target='_blank' href='https://developer-express.vive.com/resources/vive-sense/eye-and-facial-tracking-sdk/' rel="noreferrer">
+                                        <h4 className="skill-card__title">SDK {t('Develop')}</h4>
+                                    </a>
+                                       {/* <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p> */}
                                 </div>
                                 <div className="skill-card__icon">
                                     <img src="https://i.imgur.com/fQqH81k.png" alt="html" title="html"/>
@@ -228,9 +236,9 @@ const HomeComponents = ({ t, setType }) => {
         {/* Start work */}
         <div className="work bg-color-white lean-bg--top lean-bg--bottom">
             <div className="container">
-                <h2 className="subtitle u-text-center wow bounceInUp">{t('WorkList')}</h2>
+                <h2 className="subtitle u-text-center">{t('WorkList')}</h2>
                 <div className="work-list">
-                    <div className="work-item  ">
+                    <div className="work-item" id='Workweb'>
                         <div className="row">
                             <div className=" col-sm-8 col-lg-4  order-sm-2">
                                 <div className="imgbox">
@@ -249,7 +257,7 @@ const HomeComponents = ({ t, setType }) => {
                         </div>
                     </div>
 
-                    <div className="work-item  ">
+                    <div className="work-item" id='WorkAI'>
                         <div className="row">
                             <div className=" col-sm-8 col-lg-4  offset-lg-1 order-sm-1">
                                 <div className="imgbox">
@@ -268,7 +276,7 @@ const HomeComponents = ({ t, setType }) => {
                         </div>
                     </div>
 
-                    <div className="work-item  ">
+                    <div className="work-item" id='WorkGame'>
                         <div className="row">
                             <div className="col-sm-8 col-lg-4  order-sm-2">
                                 <div className="imgbox">

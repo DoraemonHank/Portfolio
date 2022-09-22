@@ -35,11 +35,13 @@ const NavComponent = (props) => {
   const onLinkWeb = () => {
     setType('web')
     localStorage.setItem('Type', JSON.stringify('web'))
+    onHandleBuger()
   }
 
   const onLinkDl = () => {
     setType('dl')
     localStorage.setItem('Type', JSON.stringify('dl'))
+    onHandleBuger()
   }
 
   return (
@@ -70,31 +72,31 @@ const NavComponent = (props) => {
                     <div id="mainListDiv" className={'main_list ' + mainListDiv} >
                         <ul>
                             <li>
-                                <Link className="fs-5 active" to="/">
+                                <Link onClick={onHandleBuger} className={'fs-5 ' + isActive} to="/">
                                     {t('HomePage')}
                                 </Link>
                             </li>
 
                             <li >
-                                <Link className="fs-5" to="/about">
+                                <Link onClick={onHandleBuger} className={'fs-5 ' + isActive} to="/about">
                                     {t('About')}
                                 </Link>
                             </li>
 
                             <li >
-                                <Link className="fs-5" to="/web" onClick={onLinkWeb}>
+                                <Link className={'fs-5 ' + isActive} to="/web" onClick={onLinkWeb}>
                                     {t('Web')}
                                 </Link>
                             </li>
 
                             <li >
-                                <Link className="fs-5" to="/dl" onClick={onLinkDl}>
+                                <Link className={'fs-5 ' + isActive} to="/dl" onClick={onLinkDl}>
                                     {t('AI')}
                                 </Link>
                             </li>
 
                             <li >
-                                <Link className="fs-5" to="/contact">
+                                <Link onClick={onHandleBuger} className={'fs-5 ' + isActive} to="/contact">
                                     {t('Contact')}
                                 </Link>
                             </li>

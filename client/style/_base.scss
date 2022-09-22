@@ -219,16 +219,16 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 
-@media screen and (max-width:457px) {
-    .fs-sm{
-      font-size: 10px;
-    }
-}
-@media screen and (min-width:458px) and (max-width:468px) {
-  .fs-sm{
-    font-size: 15px;
-  }
-}
+// @media screen and (max-width:457px) {
+//     .fs-sm{
+//       font-size: 10px;
+//     }
+// }
+// @media screen and (min-width:458px) and (max-width:468px) {
+//   .fs-sm{
+//     font-size: 15px;
+//   }
+// }
 
 @media screen and (max-width:424px) {
   .btn-sm{

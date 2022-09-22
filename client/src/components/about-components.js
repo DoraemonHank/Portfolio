@@ -104,7 +104,6 @@ const Aboutcomponents = ({ t }) => {
                 key={Date.now()}
                 theme="light"
                 option={{
-                  color: ['#3398DB'],
                   tooltip: {
                     trigger: 'axis',
                     axisPointer: {
@@ -118,24 +117,36 @@ const Aboutcomponents = ({ t }) => {
                       fontSize: '12px'
                     }
                   },
-                  grid: {
-                    top: 40,
-                    bottom: 30,
-                    right: 0,
-                    left: 57
-                  },
-                  xAxis: [{
+                  dataset: [
+                    {
+                      dimensions: ['name', 'familiarity', 'order'],
+                      source: [
+                        ['C', 10, 1],
+                        ['C++', 9, 2],
+                        ['C#', 6, 3],
+                        ['Python', 7, 4],
+                        ['HTML', 8.5, 5],
+                        ['CSS', 7.5, 6],
+                        ['JS', 8, 7]
+                      ]
+                    },
+                    {
+                      transform: {
+                        type: 'sort',
+                        config: { dimension: 'order', order: 'asc' }
+                      }
+                    }
+                  ],
+                  xAxis: {
                     type: 'category',
-                    data: ['C', 'C++', 'C#', 'Python', 'HTML', 'CSS', 'JS']
-                  }],
-                  yAxis: [{
-                    type: 'value'
-                  }],
-                  series: [{
+                    axisLabel: { interval: 0, rotate: 30 }
+                  },
+                  yAxis: [{ }],
+                  series: {
                     type: 'bar',
-                    barWidth: '60%',
-                    data: [10, 9, 6, 7, 8.5, 7.5, 8]
-                  }]
+                    encode: { x: 'name', y: 'familiarity' },
+                    datasetIndex: 1
+                  }
                 }}
                 style={{ width: '100%', height: 400 }}
             />
@@ -381,7 +392,7 @@ const Aboutcomponents = ({ t }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="timeline-cards__row">
+                        <div className="timeline-cards__row d-none">
                             <div className="timeline-card">
                                 <h1 className='timeline-card__title'>{t('NFU')}</h1>
                                 <div className="d-flex">
