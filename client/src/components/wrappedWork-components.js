@@ -66,7 +66,7 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
                                 </tr>
                                 <tr>
                                     <td className="pb-3 pt-3">{t('VersionControl')}</td>
-                                    <td className="pb-3 pt-3">Github、GibLab、Gerrit</td>
+                                    <td className="pb-3 pt-3">Github、GitLab、Gerrit</td>
                                 </tr>
                             </table>
                         }
@@ -90,7 +90,7 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
                                 </tr>
                                 <tr>
                                     <td className="pb-3 pt-3">{t('VersionControl')}</td>
-                                    <td className="pb-3 pt-3">Github、GibLab、Gerrit</td>
+                                    <td className="pb-3 pt-3">Github、GitLab、Gerrit</td>
                                 </tr>
                             </table>
                         }
@@ -114,7 +114,7 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
                                 </tr>
                                 <tr>
                                     <td className="pb-3 pt-3">{t('VersionControl')}</td>
-                                    <td className="pb-3 pt-3">Github、GibLab、Gerrit</td>
+                                    <td className="pb-3 pt-3">Github、GitLab、Gerrit</td>
                                 </tr>
                             </table>
                         }

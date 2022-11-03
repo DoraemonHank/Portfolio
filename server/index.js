@@ -28,7 +28,7 @@ app.use("/api/user",postRoute);
 app.use("/api/img",imgRoute);
 app.use("/api/contact",contactRoute);
 
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 8080;
 
 app.listen(port,() =>{
     console.log("Server running on port " + port);
