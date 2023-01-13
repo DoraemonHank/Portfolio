@@ -1,28 +1,36 @@
 import React, { useEffect } from 'react'
-import { useHistory } from 'react-router'
+import WorkService from '../services/work.service'
 
-const ArticleComponents = ({ article }) => {
-  const history = useHistory()
+const ArticleComponents = ({ article, setArticle }) => {
   useEffect(() => {
     window.scroll(0, 0)
-    console.log(JSON.parse(localStorage.getItem('Type')))
-    if (JSON.stringify(article) === '{}') {
-      history.push('/' + JSON.parse(localStorage.getItem('Type')))
-    }
-  }, [article])
+    const id = JSON.parse(localStorage.getItem('post_id'))
+    WorkService.getPostFromId(id)
+      .then(data => {
+        console.log(data.data)
+        setArticle(data.data[0])
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }, [])
+
   return (
-
     <div>
-        <section className="portfolio"></section>
-        <div className="container">
-          <h4 className="text-center">{article.title}</h4>
-          <div className="d-flex justify-content-center">
-            <div className="" dangerouslySetInnerHTML={{ __html: article.content }}></div>
+      {
+        article &&
+        <div>
+          <section className="portfolio"></section>
+          <div className="container">
+            <h4 className="text-center">{article.title}</h4>
+            <div className="d-flex justify-content-center">
+              <div className="" dangerouslySetInnerHTML={{ __html: article.content }}></div>
+            </div>
           </div>
-
         </div>
-
+      }
     </div>
+
   )
 }
 

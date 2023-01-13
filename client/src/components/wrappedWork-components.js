@@ -1,15 +1,13 @@
 import React, { useEffect } from 'react'
-import { useHistory } from 'react-router'
+import { Link } from 'react-router-dom'
 
 const WrappedWorkComponents = ({ postData, t, setArticle }) => {
-  const history = useHistory()
   useEffect(() => {
     console.log(postData)
   }, [])
 
   const onHandleDetail = (post) => {
-    setArticle(post)
-    history.push('/post')
+    localStorage.setItem('post_id', JSON.stringify(post._id))
   }
   return (
 
@@ -159,29 +157,8 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
                                     </tbody>
                                 </table>
                                 <div className='d-flex btn-sm justify-content-center'>
-                                    <button className="btn btn-outline-primary fs-sm"
-                                    data-bs-toggle="modal" data-bs-target={'#staticBackdrop' + index.toString(2)}>{t('PreviewIntro')}</button>
-                                    <button className="btn btn-outline-primary ms-sm-5 fs-sm" onClick={() => { onHandleDetail(data) } }>{t('DetailIntro')}</button>
+                                    <Link to='/post' target='_blank' className="btn btn-outline-primary ms-sm-5 fs-sm" onClick={() => { onHandleDetail(data) } }>{t('DetailIntro')}</Link>
                                     <a target='_blank' href={data.demo} className="btn btn-outline-primary ms-sm-5 fs-sm" rel="noreferrer">Demo</a>
-                                </div>
-
-                                {/*  Modal  */}
-                                <div className="modal fade" id={'staticBackdrop' + index.toString(2)} data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div className="modal-dialog modal-dialog-scrollable">
-                                        <div className="modal-content">
-                                            <div className="modal-header">
-                                                <h5 className="modal-title" id={'staticBackdropLabel' + index.toString(2)}>{data.title}</h5>
-                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div className="modal-body pb-5" dangerouslySetInnerHTML={{ __html: data.content }}>
-
-                                            </div>
-                                            <div className="modal-footer">
-                                                {/* <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" className="btn btn-primary">Understood</button> */}
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
