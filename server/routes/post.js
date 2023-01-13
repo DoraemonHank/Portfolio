@@ -55,4 +55,15 @@ router.get("/getPost/:category/:lang",(req,res) =>{
     })
 })
 
+router.post("/getPostFromId",(req,res) =>{
+    const {_id} = req.body
+    Post.find({_id: _id})
+    .then(data =>{
+        res.send(data)
+    })
+    .catch(error =>{
+        res.status(500).send(error)
+    })
+})
+
 module.exports = router;
