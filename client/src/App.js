@@ -40,7 +40,7 @@ const App = () => {
                 </Route>
 
                 <Route path='/post' exact>
-                    <ArticleComponents article={article}/>
+                    <ArticleComponents article={article} setArticle={setArticle}/>
                 </Route>
 
                 <Route path='/contact' exact>

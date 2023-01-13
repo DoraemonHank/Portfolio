@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react'
-import { useHistory } from 'react-router'
+// import { useHistory } from 'react-router'
+import { Link } from 'react-router-dom'
 
 const WrappedWorkComponents = ({ postData, t, setArticle }) => {
-  const history = useHistory()
+//   const history = useHistory()
   useEffect(() => {
     console.log(postData)
   }, [])
 
   const onHandleDetail = (post) => {
-    setArticle(post)
-    history.push('/post')
+    localStorage.setItem('post_id', JSON.stringify(post._id))
   }
   return (
 
@@ -159,9 +159,9 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
                                     </tbody>
                                 </table>
                                 <div className='d-flex btn-sm justify-content-center'>
-                                    <button className="btn btn-outline-primary fs-sm"
-                                    data-bs-toggle="modal" data-bs-target={'#staticBackdrop' + index.toString(2)}>{t('PreviewIntro')}</button>
-                                    <button className="btn btn-outline-primary ms-sm-5 fs-sm" onClick={() => { onHandleDetail(data) } }>{t('DetailIntro')}</button>
+                                    {/* <button className="btn btn-outline-primary fs-sm"
+                                    data-bs-toggle="modal" data-bs-target={'#staticBackdrop' + index.toString(2)}>{t('PreviewIntro')}</button> */}
+                                    <Link to='/post' target='_blank' className="btn btn-outline-primary ms-sm-5 fs-sm" onClick={() => { onHandleDetail(data) } }>{t('DetailIntro')}</Link>
                                     <a target='_blank' href={data.demo} className="btn btn-outline-primary ms-sm-5 fs-sm" rel="noreferrer">Demo</a>
                                 </div>
 
