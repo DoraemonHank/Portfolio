@@ -30,6 +30,7 @@ const WorkHoc = (WrappedComponent, articleLang, t, setArticle) => {
 
     componentDidMount () {
       const currentType = JSON.parse(localStorage.getItem('Type'))
+      console.log(currentType, articleLang)
       this.getPost(currentType, articleLang)
         .then(data => {
           this.setState({

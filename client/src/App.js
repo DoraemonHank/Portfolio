@@ -19,6 +19,9 @@ const App = () => {
     setArticleLang(articleLang === 'tw' ? 'en' : 'tw')
   }
   useEffect(() => {
+    const currentLng = JSON.parse(localStorage.getItem('lng'))
+    i18n.changeLanguage(currentLng)
+    setArticleLang(currentLng === 'zh-tw' ? 'tw' : 'en')
     setType(JSON.parse(localStorage.getItem('Type')))
   }, [])
   return (
@@ -40,7 +43,7 @@ const App = () => {
                 </Route>
 
                 <Route path='/post' exact>
-                    <ArticleComponents article={article} setArticle={setArticle}/>
+                    <ArticleComponents t={t} article={article} setArticle={setArticle}/>
                 </Route>
 
                 <Route path='/contact' exact>

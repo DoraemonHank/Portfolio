@@ -5,6 +5,7 @@ import '../../style/myNav.scss'
 
 const NavComponent = (props) => {
   const { t, changeLanguage, setType } = props
+  const [lngValue, setLngValue] = useState(JSON.parse(localStorage.getItem('lng')))
   const [isActive, setIsActive] = useState('')
   const [mainListDiv, setmainListDiv] = useState('')
   const [navSize, setnavSize] = useState('10rem')
@@ -18,6 +19,8 @@ const NavComponent = (props) => {
 
   const onHandleSelect = (e) => {
     console.log(e.target.value)
+    localStorage.setItem('lng', JSON.stringify(e.target.value))
+    setLngValue(e.target.value)
     changeLanguage(e.target.value)
   }
 
@@ -63,7 +66,7 @@ const NavComponent = (props) => {
                             <i className="icon icon-youtube"></i>
                         </a>
                         <select onChange={onHandleSelect} data-testid="test-select"
-                        className=" ms-3"
+                        className=" ms-3" value={lngValue}
                         aria-label="Default select example">
                             <option value="zh-tw" >中文</option>
                             <option value="en">English</option>

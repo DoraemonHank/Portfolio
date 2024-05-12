@@ -8,6 +8,7 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
 
   const onHandleDetail = (post) => {
     localStorage.setItem('post_id', JSON.stringify(post._id))
+    localStorage.setItem('post_ln_id', JSON.stringify(post.ln_id))
   }
   return (
 
@@ -125,11 +126,11 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
         <div className="container mt-4">
             <div className="d-flex flex-column">
                 <div className="d-flex justify-content-center">
-                    <h2 className="subtitle u-text-center">{t('Collection')}</h2>
+                    <h2 className="subtitle u-text-center">{t('Portfolio')}</h2>
                 </div>
 
             {
-                postData.map((data, index) => (
+                postData.sort((a, b) => a.order - b.order).map((data, index) => (
                     // eslint-disable-next-line react/jsx-key
                     <div className="mb-5  ps-5 pe-5 pb-5 container flex-column flex-md-row">
                         <h4 className="text-center">{data.title}</h4>

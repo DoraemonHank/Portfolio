@@ -25,7 +25,7 @@ const FooterComponents = ({ t, setType }) => {
     <div>
         <footer className="cointer bg-dark">
             <div className="d-flex justify-content-center flex-column flex-sm-row">
-                <ul>
+                <ul style={{listStyle:'none'}}>
                     <li className='text-center'>
                         <h4 className='text-light'>{t('About')}</h4>
                     </li>
@@ -37,7 +37,7 @@ const FooterComponents = ({ t, setType }) => {
                     </li>
                 </ul>
 
-                <ul>
+                <ul style={{listStyle:'none'}}>
                     <li className='text-center'>
                         <h4 className='text-light'>{t('WorkList')}</h4>
                     </li>
@@ -52,7 +52,7 @@ const FooterComponents = ({ t, setType }) => {
                     </li>
                 </ul>
 
-                <ul>
+                <ul style={{listStyle:'none'}}>
                     <li className='text-center'>
                         <h4 className='text-light'>{t('Contact')}</h4>
                     </li>

@@ -214,6 +214,17 @@ const HomeComponents = ({ t, setType }) => {
                                 </div>
                             </div>
                         </div>
+                        <div className="col-sm-6">
+                                <div className="skill-card position-relative wow bounceInUp" data-wow-delay="1s">
+                                    <div className="skill-card__inner">
+                                        <h4 className="skill-card__title">VR {t('SystemIntegration')}</h4>
+                                        {/* <p className="skill-card__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad numquam aliquid, reiciendis hic impedit iure nesciunt dolorum ex atque dolorem.</p> */}
+                                    </div>
+                                    <div className="skill-card__icon">
+                                        <img src="https://i.imgur.com/fQqH81k.png" alt="html" title="html" />
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>

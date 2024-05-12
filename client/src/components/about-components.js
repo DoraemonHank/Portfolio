@@ -79,6 +79,21 @@ const Aboutcomponents = ({ t }) => {
                             <p className="card-text">
                                 {t('SkillSdk')}
                             </p>
+                            <div>
+                                <img style={{maxWidth:'100%', height:'auto'}} src="https://i.imgur.com/5jWdNKI.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-6 mb-5">
+                    <div className="card">
+                        <div className="card-body">
+                            <div className="d-flex">
+                                <h5 className=" title-line card-title__style ">VR {t('SystemIntegration')}</h5>
+                            </div>
+                            <p className="card-text">
+                                {t('SkillInt')}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -388,7 +403,7 @@ const Aboutcomponents = ({ t }) => {
                                 <div className="d-flex justify-content-md-end">
                                     <p className="timeline-card__text">{t('EE')}</p>
                                     <div className='ms-1 me-1' style={{ width: '1.5px', backgroundColor: 'gray' }}></div>
-                                    <p className="timeline-card__text">{t('Master')}</p>
+                                    <p className="">{t('Master')}</p>
                                 </div>
                             </div>
                         </div>

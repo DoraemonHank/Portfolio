@@ -374,6 +374,9 @@ $default-color:#70a7eb;
     .timeline-card__title{
         margin-left: 300px;
     }
+    .timeline-card__text{
+        margin-left: 180px;
+    }
     .timeline-card__long-title{
         margin-left: 200px;
     }
@@ -430,6 +433,9 @@ $timeline-card-map: "title","long-title";
         .timeline-card__title{
             margin-left: 180px;
         }
+        .timeline-card__text{
+            margin-left: 70px;
+        }
         .timeline-card__long-title{
             margin-left: 80px;
         }
@@ -446,6 +452,9 @@ $timeline-card-map: "title","long-title";
     .timeline-cards__row:nth-child(odd){
         justify-content: flex-end;
         .timeline-card__title{
+            margin-left: 0rem;
+        }
+        .timeline-card__text{
             margin-left: 0rem;
         }
         .timeline-card__long-title{
