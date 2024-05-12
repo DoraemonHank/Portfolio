@@ -6,6 +6,10 @@ const WrappedWorkComponents = ({ postData, t, setArticle }) => {
     console.log(postData)
   }, [])
 
+  useEffect(() =>{
+    window.scroll(0, 0)
+  }, [])
+
   const onHandleDetail = (post) => {
     localStorage.setItem('post_id', JSON.stringify(post._id))
     localStorage.setItem('post_ln_id', JSON.stringify(post.ln_id))
