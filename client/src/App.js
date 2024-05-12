@@ -20,8 +20,14 @@ const App = () => {
   }
   useEffect(() => {
     const currentLng = JSON.parse(localStorage.getItem('lng'))
-    i18n.changeLanguage(currentLng)
-    setArticleLang(currentLng === 'zh-tw' ? 'tw' : 'en')
+    if (!currentLng) {
+        localStorage.setItem('lng', JSON.stringify('zh-tw'))
+        i18n.changeLanguage('zh-tw')
+    }
+    else {
+        i18n.changeLanguage(currentLng)
+        setArticleLang(currentLng === 'zh-tw' ? 'tw' : 'en')
+    }
     setType(JSON.parse(localStorage.getItem('Type')))
   }, [])
   return (
